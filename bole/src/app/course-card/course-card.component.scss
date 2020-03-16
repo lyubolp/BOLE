@@ -1,0 +1,14 @@
+@import "../../styles.scss";
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 80px;
+    background: $menu-background;
+    color: $primary-color;
+    padding: 10px;
+    font: $title-font;
+}

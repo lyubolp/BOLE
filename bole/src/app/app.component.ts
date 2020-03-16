@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CourseComponent } from './course/course.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'bole';
+  courses: CourseComponent[] = [];
+
+  constructor() {
+    const courseA = new CourseComponent();
+    courseA.id = 1;
+    courseA.name = 'SDA';
+
+    const courseB = new CourseComponent();
+    courseB.id = 2;
+    courseB.name = 'USI';
+
+    this.courses.push(courseA);
+    this.courses.push(courseB);
+  }
 }

@@ -1,0 +1,18 @@
+import { Component, OnInit, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-course',
+  templateUrl: './course.component.html',
+  styleUrls: ['./course.component.scss']
+})
+export class CourseComponent implements OnInit {
+  name: string;
+  id: number;
+
+  constructor() { }
+
+  ngOnInit(): void {
+
+  }
+
+}
