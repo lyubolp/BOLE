@@ -1,0 +1,79 @@
+<nav>
+    <ul class="nav-left" #navLeft>
+        <li>
+            <a routerLink="/" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
+                (mouseleave)="mouseLeaveNavItem($event)" class="logo">
+                BOLE
+                <div class="underline-container" style='display: none;'>
+                    <div class="underline"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/dashboard" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
+                (mouseleave)="mouseLeaveNavItem($event)">
+                Табло
+                <div class="underline-container" style='display: none;'>
+                    <div class="underline"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/courses" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
+                (mouseleave)="mouseLeaveNavItem($event)">
+                Курсове
+                <div class="underline-container" style='display: none;'>
+                    <div class="underline"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/homeworks" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
+                (mouseleave)="mouseLeaveNavItem($event)">
+                Домашни
+                <div class="underline-container" style='display: none;'>
+                    <div class="underline"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/grades" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
+                (mouseleave)="mouseLeaveNavItem($event)">
+                Оценки
+                <div class="underline-container" style='display: none;'>
+                    <div class="underline"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/social" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
+                (mouseleave)="mouseLeaveNavItem($event)">
+                Общност
+                <div class="underline-container" style='display: none;'>
+                    <div class="underline"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/cloud" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
+                (mouseleave)="mouseLeaveNavItem($event)">
+                Облак
+                <div class="underline-container" style='display: none;'>
+                    <div class="underline"></div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav-right">
+        <li>
+            <a routerLink="/user" routerLinkActive="active" class="user">
+                <div>
+                    {{username}}
+                </div>
+                <div class="avatar">
+                    <img [src]="avatar" alt="">
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>
