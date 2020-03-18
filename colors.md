@@ -10,3 +10,9 @@ course-3: #5B1001;
 course-4: #573278;
 course-5: #2A557B;
 course-6: #35642A;
+
+icon-red: #A70E0E
+icon-cyan: #1EA295
+icon-green: #0C9134
+icon-blue: #0B35DE
+icon-purple: #5F14B4
