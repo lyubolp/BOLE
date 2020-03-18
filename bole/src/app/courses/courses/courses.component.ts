@@ -13,6 +13,10 @@ export class CoursesComponent implements OnInit {
   constructor(private courseCardService: CourseCardService) {
   }
 
+  courseCardsFiltered: CourseCard[] = [];
+  courseCards: CourseCard[] = [];
+  searchText = '';
+
   ngOnInit(): void {
     this.courseCardService.getCourseCardSections().subscribe((sections) => this.sections = sections);
   }
