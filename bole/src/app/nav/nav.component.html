@@ -1,8 +1,8 @@
 <nav>
     <ul class="nav-left" #navLeft>
         <li>
-            <a routerLink="/" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
-                (mouseleave)="mouseLeaveNavItem($event)" class="logo">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                (mouseenter)="mouseEnterNavItem($event)" (mouseleave)="mouseLeaveNavItem($event)" class="logo">
                 BOLE
                 <div class="underline-container" style='display: none;'>
                     <div class="underline"></div>
