@@ -5,10 +5,24 @@
     padding: 0;
 }
 
+html, body {
+    background: #1d2c39;
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background: #1D2C39;
+        overflow: auto;
+    }
 }
+
 
 $page-background: #1D2C39;
 $panel-background: #15182D;
