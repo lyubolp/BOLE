@@ -1,0 +1,12 @@
+background: #36393F;
+panel-background: #202225;
+menu-background: #202225;
+active-text: #FFFFFF;
+inactive-text: #AAAAAA;
+buttons: #4E84EE;
+course-1: #2A6264;
+course-2: #203964;
+course-3: #5B1001;
+course-4: #573278;
+course-5: #2A557B;
+course-6: #35642A;
