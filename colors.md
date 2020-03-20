@@ -1,6 +1,7 @@
 background: #36393F;
 panel-background: #202225;
 menu-background: #202225;
+user-menu-background: #4F545C;
 active-text: #FFFFFF;
 inactive-text: #AAAAAA;
 buttons: #4E84EE;
