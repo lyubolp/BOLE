@@ -1,0 +1,18 @@
+@import "../../../themes/navy.scss";
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 120px;
+    background: $menu-background;
+    padding: 10px;
+    margin: 10px;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
