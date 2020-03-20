@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 @import '../../themes/dark.scss';
-=======
-@import '../../themes/navy.scss';
->>>>>>> 6ef5d6d... Feat Navigation component
 
 nav {
     display: flex;
@@ -10,11 +6,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     background: $menu-background;
-<<<<<<< HEAD
     height: 51px;
-=======
->>>>>>> 6ef5d6d... Feat Navigation component
-
     ul {
         display: flex;
         flex-direction: row;
@@ -25,14 +17,7 @@ nav {
             height: 100%;
             
             a {
-<<<<<<< HEAD
                 justify-content: center;
-=======
-                // align-items: center;
-                // align-content: center;
-                justify-content: center;
-                // justify-items: center;
->>>>>>> 6ef5d6d... Feat Navigation component
                 display: flex;
                 flex-direction: column;
                 color: $menu-color;

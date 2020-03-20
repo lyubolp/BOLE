@@ -65,8 +65,9 @@
         </li>
     </ul>
     <ul class="nav-right">
-        <li>
-            <a routerLink="/user" routerLinkActive="active" class="user">
+        <li id="user-list-element">
+            <!-- <a routerLink="/user" routerLinkActive="active" class="user"> -->
+            <a href="#" (click)="toggleUserDropdown($event)" class="user">
                 <div>
                     {{username}}
                 </div>
