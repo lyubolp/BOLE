@@ -1,29 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    background: #36393F;
-    overflow-x: hidden;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        background: #1D2C39;
-        overflow: auto;
-    }
-}
-
-
 $page-background: #36393F;
 $panel-background: #202225;
 $menu-background: #202225;
@@ -43,3 +18,28 @@ $icon-cyan: #1EA295;
 $icon-green: #0C9134;
 $icon-blue: #0B35DE;
 $icon-purple: #5F14B4;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: $page-background;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background: #1D2C39;
+        overflow: auto;
+    }
+}
+
+
