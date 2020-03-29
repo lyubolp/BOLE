@@ -56,6 +56,26 @@ nav {
                     background: $menu-underline;
                 }
             }
+
+            .search-bar {
+                margin: 8px;
+                display: flex;
+                input {
+                    background: lightslategray;
+                    font-size: 20px;
+                    max-width: 500px;
+                    outline: none;
+                    padding: 5px 15px 5px 15px;
+                    border-radius: 20px;
+                    box-shadow: none;
+                    border: 1px solid black;
+                    box-shadow: -2px 3px 10px -2px rgba(30, 30, 30, 0.8);
+
+                    &::placeholder {
+                        color: #333;
+                    }
+                }
+            }
         }
 
         &.nav-right {
@@ -69,6 +89,7 @@ nav {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                cursor: pointer;
                 
                 div {
                     display: flex;
