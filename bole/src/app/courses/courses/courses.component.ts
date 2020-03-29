@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CourseCard } from '../course-card';
+import { Component, OnInit, Input } from '@angular/core';
+import { CourseGroupComponent } from '../course-group/course-group.component';
+import { CourseGroup } from '../course-group';
 
 @Component({
   selector: 'app-courses',
@@ -7,31 +8,26 @@ import { CourseCard } from '../course-card';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent implements OnInit {
-  constructor() { }
+  courseGroups: CourseGroup[] = [];
 
-  courseCardsFiltered: CourseCard[] = [];
-  courseCards: CourseCard[] = [];
-  searchText = '';
-
-  ngOnInit(): void {
-    this.courseCards.push({ id: 1, name: 'Data structures and algorithms' });
-    this.courseCards.push({ id: 2, name: 'Object-oriented programming' });
-    this.courseCards.push({ id: 3, name: 'Introduction to programming' });
-    this.courseCards.push({ id: 4, name: 'Introduction to Software Engineering' });
-    this.courseCards.push({ id: 5, name: 'Quality assurance' });
-    this.courseCards.push({ id: 6, name: 'Discrete mathematics' });
-    this.courseCards.push({ id: 7, name: 'C++ for beginners' });
-    this.courseCards.push({ id: 8, name: 'Intermediate C++' });
-
-    this.filterCards();
+  constructor() {
   }
 
-  filterCards() {
-    console.log(this.searchText);
-    if (this.searchText === '') {
-      this.courseCardsFiltered = this.courseCards;
-    } else {
-      this.courseCardsFiltered = this.courseCards.filter((card) => card.name.toLowerCase().includes(this.searchText.toLowerCase()));
-    }
+  ngOnInit(): void {
+    this.courseGroups.push(new CourseGroup('Летен Семестър 2019/2020', [
+      { id: 1, name: 'Data structures and algorithms' },
+      { id: 2, name: 'Object-oriented programming' },
+      { id: 3, name: 'Introduction to programming' },
+      { id: 4, name: 'Introduction to Software Engineering' },
+      { id: 5, name: 'Quality assurance' },
+      { id: 6, name: 'Discrete mathematics' },
+    ]));
+    
+    this.courseGroups.push(new CourseGroup('Зимен семестър 2018/2019', [
+      { id: 5, name: 'Quality assurance' },
+      { id: 6, name: 'Discrete mathematics' },
+      { id: 7, name: 'C++ for beginners' },
+      { id: 8, name: 'Intermediate C++' }
+    ]));
   }
 }
