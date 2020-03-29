@@ -9,10 +9,6 @@ export class NavComponent implements OnInit {
   username = 'Гост';
   avatar = 'assets/icons/person-24px.svg';
   userDropdown: HTMLElement;
-<<<<<<< HEAD
-
-=======
->>>>>>> 0f2f990... Fix nav from merge
   constructor() { }
 
   ngOnInit() {
@@ -46,10 +42,6 @@ export class NavComponent implements OnInit {
       (target.children[0] as HTMLElement).style.display = 'none';
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0f2f990... Fix nav from merge
   toggleUserDropdown(event: MouseEvent) {
     if (!this.userDropdown) {
       this.userDropdown = document.getElementById('user-dropdown');
