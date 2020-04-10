@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -9,8 +10,8 @@ export class NavComponent implements OnInit {
   username = 'Гост';
   avatar = 'assets/icons/person-24px.svg';
   userDropdown: HTMLElement;
-
-  constructor() { }
+  searchText = '';
+  constructor(public router: Router) { }
 
   ngOnInit() {
     if (!this.userDropdown) {
@@ -30,6 +31,10 @@ export class NavComponent implements OnInit {
     });
   }
 
+  filterCards() {
+    // TODO filter courses  
+  }
+
   mouseEnterNavItem(event: MouseEvent) {
     if (event.target instanceof HTMLElement) {
       const target = event.target as HTMLElement;
@@ -43,7 +48,6 @@ export class NavComponent implements OnInit {
       (target.children[0] as HTMLElement).style.display = 'none';
     }
   }
-
   toggleUserDropdown(event: MouseEvent) {
     if (!this.userDropdown) {
       this.userDropdown = document.getElementById('user-dropdown');
