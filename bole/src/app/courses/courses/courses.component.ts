@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseGroupComponent } from '../course-group/course-group.component';
 import { CourseGroup } from '../course-group';
+=======
+import { Component, OnInit } from '@angular/core';
+import { CourseCard } from '../../interfaces/course-card';
+>>>>>>> 47e47f4... WIP course
 
 @Component({
   selector: 'app-courses',
