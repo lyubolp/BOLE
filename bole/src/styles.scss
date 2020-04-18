@@ -22,4 +22,14 @@ body {
         background: #1D2C39;
         overflow: auto;
     }
+
+    font: $menu-font;
+}
+
+.page-title
+{
+    font-size: 1.6em;
+    padding: 2%;
+    color: white;
+    text-decoration: underline;
 }
