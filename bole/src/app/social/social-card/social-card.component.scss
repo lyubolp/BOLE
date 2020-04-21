@@ -1,0 +1,33 @@
+@import "../../../themes/dark.scss";
+
+.social-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    width: 1000px;
+    height: 60px;
+    background: $menu-background;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 0px 10px 0px;
+    border-radius: 5px;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+.left-collumn{
+    padding: 20px;
+    width: 70%;
+    vertical-align: middle;
+    color: $inactive-text;
+}
+.right-collumn{
+    padding: 3px;
+    width: 30%;
+    vertical-align: middle;
+    color: $inactive-text;
+}
+.color-strip{
+    width: 10px;
+    background-color: $inactive-text;
+}
