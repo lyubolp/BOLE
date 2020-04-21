@@ -1,4 +1,4 @@
-@import '../../themes/navy.scss';
+@import '../../themes/dark.scss';
 
 nav {
     display: flex;
@@ -6,7 +6,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     background: $menu-background;
-
+    height: 51px;
     ul {
         display: flex;
         flex-direction: row;
@@ -17,10 +17,7 @@ nav {
             height: 100%;
             
             a {
-                // align-items: center;
-                // align-content: center;
                 justify-content: center;
-                // justify-items: center;
                 display: flex;
                 flex-direction: column;
                 color: $menu-color;
@@ -59,15 +56,40 @@ nav {
                     background: $menu-underline;
                 }
             }
+
+            .search-bar {
+                margin: 8px;
+                display: flex;
+                input {
+                    background: lightslategray;
+                    font-size: 20px;
+                    max-width: 500px;
+                    outline: none;
+                    padding: 5px 15px 5px 15px;
+                    border-radius: 20px;
+                    box-shadow: none;
+                    border: 1px solid black;
+                    box-shadow: -2px 3px 10px -2px rgba(30, 30, 30, 0.8);
+
+                    &::placeholder {
+                        color: #333;
+                    }
+                }
+            }
         }
 
         &.nav-right {
             padding: 0 20px 0 0;
-            
+            li {
+                display: flex;
+                flex-direction: column;
+            }
+
             .user {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                cursor: pointer;
                 
                 div {
                     display: flex;
@@ -85,7 +107,36 @@ nav {
                     }
                 }
             }
+
+            #user-dropdown-container {
+                position: absolute;
+                width: 170px;
+                right: 20px;            
+                top: 51px;
+
+                #user-dropdown {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    li {
+                        a {
+                            background: $menu-background;
+                            font-size: 16px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            &:hover {
+                                background: $menu-background-hover;
+                            }
+
+                            svg {
+                                fill: white;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-    
 }

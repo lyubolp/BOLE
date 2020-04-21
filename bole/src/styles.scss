@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "themes/dark.scss";
 
 * {
     margin: 0;
@@ -6,7 +7,7 @@
 }
 
 html, body {
-    background: #1d2c39;
+    background: $page-background;
     overflow-x: hidden;
 }
 
@@ -22,8 +23,3 @@ body {
         overflow: auto;
     }
 }
-
-
-$page-background: #1D2C39;
-$panel-background: #15182D;
-$menu-background: #0B3C67;

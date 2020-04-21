@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CourseCard } from '../course-card';
+import { CourseCard } from '../../interfaces/course-card';
 
 @Component({
   selector: 'app-course-card',
@@ -12,5 +12,4 @@ export class CourseCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

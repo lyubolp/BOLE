@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CourseCard } from '../course-card';
+import { Component, OnInit, Input } from '@angular/core';
+import { CourseCardSection } from '../../interfaces/course-card-section';
+import { CourseCardService } from 'src/app/services/course-card.service';
 
 @Component({
   selector: 'app-courses',
@@ -7,31 +8,12 @@ import { CourseCard } from '../course-card';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent implements OnInit {
-  constructor() { }
+  sections: CourseCardSection[] = [];
 
-  courseCardsFiltered: CourseCard[] = [];
-  courseCards: CourseCard[] = [];
-  searchText = '';
-
-  ngOnInit(): void {
-    this.courseCards.push({ id: 1, name: 'Data structures and algorithms' });
-    this.courseCards.push({ id: 2, name: 'Object-oriented programming' });
-    this.courseCards.push({ id: 3, name: 'Introduction to programming' });
-    this.courseCards.push({ id: 4, name: 'Introduction to Software Engineering' });
-    this.courseCards.push({ id: 5, name: 'Quality assurance' });
-    this.courseCards.push({ id: 6, name: 'Discrete mathematics' });
-    this.courseCards.push({ id: 7, name: 'C++ for beginners' });
-    this.courseCards.push({ id: 8, name: 'Intermediate C++' });
-
-    this.filterCards();
+  constructor(private courseCardService: CourseCardService) {
   }
 
-  filterCards() {
-    console.log(this.searchText);
-    if (this.searchText === '') {
-      this.courseCardsFiltered = this.courseCards;
-    } else {
-      this.courseCardsFiltered = this.courseCards.filter((card) => card.name.toLowerCase().includes(this.searchText.toLowerCase()));
-    }
+  ngOnInit(): void {
+    this.courseCardService.getCourseCardSections().subscribe((sections) => this.sections = sections);
   }
 }
