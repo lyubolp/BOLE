@@ -13,7 +13,7 @@ export class SummaryPanelComponent implements OnInit {
   timeLeft: string;
 
   constructor() {
-    this.timeLeft = (this.homeworkData.due_date.getTime() - Date.now()).toString();
+    // this.timeLeft = (this.homeworkData.due_date.getTime() - Date.now()).toString();
   }
 
   ngOnInit(): void {

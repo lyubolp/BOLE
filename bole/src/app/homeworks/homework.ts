@@ -1,4 +1,4 @@
-import {CourseCard} from '../courses/course-card';
+import {CourseCard} from '../interfaces/course-card';
 
 export interface Homework {
     id: number;

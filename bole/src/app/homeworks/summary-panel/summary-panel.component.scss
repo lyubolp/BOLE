@@ -1,26 +1,11 @@
 @import '../../../themes/dark.scss';
 
 #main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 15vw;
   height: 40vh;
-  background: $menu-background;
-  margin: 1vw;
-  border-radius: 10px;
-  color: white;
 }
 
-.sub-container
-{
-  display: flex;
-  flex-direction: row;
-  height: 15%;
-  width: 90%;
-  align-items: center;
-  margin: 0.5% 5% 0.5% 5%;
-}
+
 
 #panel-color-code
 {
@@ -29,11 +14,7 @@
   height: 10%;
 }
 
-.panel-title
-{
-  font-size: 1.5em;
-  margin-bottom: 10%;
-}
+
 
 span
 {
