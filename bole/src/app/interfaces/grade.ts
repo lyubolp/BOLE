@@ -10,6 +10,7 @@ export interface Grade {
     taskId: number;
     taskName: string;
     gradeMax: number;
+    gradeMin: number;
     grade: number;
     weight: number;
 }
