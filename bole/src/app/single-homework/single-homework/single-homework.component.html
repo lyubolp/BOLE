@@ -1,4 +1,4 @@
-<span class="page-title">{{courseName}}</span>
+<span class="page-title">{{homework.course.name}} - {{homework.name}}</span>
 <div id="main">
     <div class="panel" id="task">
 
@@ -35,10 +35,10 @@
                 </svg>
                 <span class="panel-title">Решение</span>
             </div>
-            <span id="attempts-left">Разрешени опити: {{attemptsLeft}}</span>
+            <span id="attempts-left">Разрешени опити: {{homework.attemptsLeft}}</span>
             <span id="grade">Оценка:
-                <span *ngIf="grade<2">Неоценен</span>
-                <span *ngIf="grade>=2">{{grade}}</span>
+                <span *ngIf="homework.grade.grade<2">Неоценен</span>
+                <span *ngIf="homework.grade.grade>=2">{{homework.grade.grade}}</span>
             </span>
             <button>Качи решение</button>
             <button>Качи решение</button>
