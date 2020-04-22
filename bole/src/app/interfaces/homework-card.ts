@@ -1,3 +1,5 @@
+import { CourseCard } from './course-card';
+
 /**
  * A homework card is limited homeowork info used to display when browsing
  * homeworks.
@@ -8,8 +10,8 @@
  */
 export interface HomeworkCard {
     id: number;
-    courseId: number;
-    courseName: string;
-    deadline: Date;
-    homeworkId: number;
+    course: CourseCard;
+    due_date: Date;
+    statement_id: number;
+    discussion_id: number;
 }
