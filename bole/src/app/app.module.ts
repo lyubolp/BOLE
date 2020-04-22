@@ -5,13 +5,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { HomeworkComponent } from './src/app/homeworks/homework/homework.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    HomeworkComponent
+    NavComponent
   ],
   imports: [
     BrowserModule,
