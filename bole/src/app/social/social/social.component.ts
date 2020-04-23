@@ -17,6 +17,7 @@ export class SocialComponent implements OnInit {
   forumCourseCards: Forum[] = [];
   searchText = '';
 
+  // probably should be moved to services
   ngOnInit(): void {
     this.forumGeneralCards.push({ id: 1, name: 'Софтуерно инженерство 2017-2021', participants: 121, category:ForumCategory.General, threads:[]}); //, lastActivePost: 'Домашно по АСИ ???' });
     this.forumGeneralCards.push({ id: 2, name: 'Софтуерно инженерство 2017-2012, група 2', participants: 22, category:ForumCategory.General, threads:[]}); //, lastActivePost: 'Домашно по АСИ ???' });
