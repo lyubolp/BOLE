@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SocialCard } from '../social-card';
+import { Forum, ForumCategory } from '../../interfaces/forum';
 
 @Component({
   selector: 'app-social-card',
@@ -7,7 +8,7 @@ import { SocialCard } from '../social-card';
   styleUrls: ['./social-card.component.scss']
 })
 export class SocialCardComponent implements OnInit {
-  @Input() socialCard: SocialCard;
+  @Input() Forum: Forum;
 
   constructor() { }
 
