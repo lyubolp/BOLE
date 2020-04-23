@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialCard } from '../social-card';
+import { Forum, ForumCategory } from '../../interfaces/forum';
 
 @Component({
   selector: 'app-social',
@@ -10,19 +11,19 @@ export class SocialComponent implements OnInit {
 
   constructor() { }
 
-  socialGeneralCardsFiltered: SocialCard[] = [];
-  socialPersonalCardsFiltered: SocialCard[] = [];
-  SocialGeneralCards: SocialCard[] = [];
-  SocialPersonalCards: SocialCard[] = [];
+  forumGeneralCardsFiltered: Forum[] = [];
+  forumPersonalCardsFiltered: Forum[] = [];
+  forumGeneralCards: Forum[] = [];
+  forumPersonalCards: Forum[] = [];
   searchText = '';
 
   ngOnInit(): void {
-    this.SocialGeneralCards.push({ id: 1, name: 'Софтуерно инженерство 2017-2021', participants: 121, lastActivePost: 'Домашно по АСИ ???' });
-    this.SocialGeneralCards.push({ id: 2, name: 'Софтуерно инженерство 2017-2012, група 2', participants: 22, lastActivePost: 'Домашно по АСИ ???' });
-    this.SocialGeneralCards.push({ id: 3, name: 'ФМИ', participants: 500, lastActivePost: 'КСК?' });
-    this.SocialPersonalCards.push({ id: 4, name: 'Обектно-ориентирано програмиране', participants: 121, lastActivePost: 'Домашно по АСИ ???' });
-    this.SocialPersonalCards.push({ id: 5, name: 'Анализ на софтуерните изисвания', participants: 121, lastActivePost: 'Домашно по АСИ ???' });
-    this.SocialPersonalCards.push({ id: 6, name: 'Web технорлогии', participants: 121, lastActivePost: 'Домашно по АСИ ???' });
+    this.forumGeneralCards.push({ id: 1, name: 'Софтуерно инженерство 2017-2021', participants: 121, category:ForumCategory.General, threads:[]}); //, lastActivePost: 'Домашно по АСИ ???' });
+    this.forumGeneralCards.push({ id: 2, name: 'Софтуерно инженерство 2017-2012, група 2', participants: 22, category:ForumCategory.General, threads:[]}); //, lastActivePost: 'Домашно по АСИ ???' });
+    this.forumGeneralCards.push({ id: 3, name: 'ФМИ', participants: 500, category:ForumCategory.General, threads:[]}); //, lastActivePost: 'КСК?' });
+    this.forumPersonalCards.push({ id: 4, name: 'Обектно-ориентирано програмиране', participants: 121, category:ForumCategory.Course, threads:[]}); //, lastActivePost: 'Домашно по АСИ ???' });
+    this.forumPersonalCards.push({ id: 5, name: 'Анализ на софтуерните изисвания', participants: 121, category:ForumCategory.Course, threads:[]}); //, lastActivePost: 'Домашно по АСИ ???' });
+    this.forumPersonalCards.push({ id: 6, name: 'Web технорлогии', participants: 121, category:ForumCategory.Course, threads:[]}); //, lastActivePost: 'Домашно по АСИ ???' });
 
     this.filterCards();
   }
@@ -30,11 +31,11 @@ export class SocialComponent implements OnInit {
   filterCards() {
     console.log(this.searchText);
     if (this.searchText === '') {
-      this.socialGeneralCardsFiltered = this.SocialGeneralCards;
-      this.socialPersonalCardsFiltered = this.SocialPersonalCards;
+      this.forumGeneralCardsFiltered = this.forumGeneralCards;
+      this.forumPersonalCardsFiltered = this.forumPersonalCards;
     } else {
-      this.socialGeneralCardsFiltered = this.SocialGeneralCards.filter((generalCard) => generalCard.name.toLowerCase().includes(this.searchText.toLowerCase()));
-      this.socialPersonalCardsFiltered = this.socialPersonalCardsFiltered.filter((personalCard) => personalCard.name.toLowerCase().includes(this.searchText.toLowerCase()));
+      this.forumGeneralCardsFiltered = this.forumGeneralCards.filter((generalCard) => generalCard.name.toLowerCase().includes(this.searchText.toLowerCase()));
+      this.forumPersonalCardsFiltered = this.forumPersonalCards.filter((personalCard) => personalCard.name.toLowerCase().includes(this.searchText.toLowerCase()));
     }
   }
 }

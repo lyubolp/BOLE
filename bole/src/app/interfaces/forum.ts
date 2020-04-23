@@ -7,11 +7,12 @@ import { ForumThread } from './forum-thread';
 export interface Forum {
     id: number;
     name: string;
+    participants: number; //based on the mockup image
     category: ForumCategory;
     threads: ForumThread[];
 }
 
-enum ForumCategory {
+export enum ForumCategory {
     General,
     Course,
 }
