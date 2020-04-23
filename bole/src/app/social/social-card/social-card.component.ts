@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SocialCard } from '../social-card';
 import { Forum, ForumCategory } from '../../interfaces/forum';
 
 @Component({
