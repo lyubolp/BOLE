@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Homework} from '../homework';
+import { HomeworkCard } from 'src/app/interfaces/homework-card';
 
 @Component({
   selector: 'app-summary-panel',
@@ -7,7 +7,7 @@ import {Homework} from '../homework';
   styleUrls: ['./summary-panel.component.scss']
 })
 export class SummaryPanelComponent implements OnInit {
-  @Input() homeworkData: Homework;
+  @Input() homeworkData: HomeworkCard;
   @Input() colorCode: string;
 
   timeLeft: string;

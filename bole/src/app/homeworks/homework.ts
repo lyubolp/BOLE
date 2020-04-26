@@ -1,6 +1,12 @@
+/**
+ * @deprecated
+ * This class should now be obsolete
+ * It is replaced by /interfaces/homewor-card
+ */
 import {CourseCard} from '../interfaces/course-card';
 
-export interface Homework {
+
+interface Homework {
     id: number;
     course: CourseCard;
     due_date: Date;
