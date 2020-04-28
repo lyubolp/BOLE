@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Homework } from '../../interfaces/homework';
-import {createUrlResolverWithoutPackagePrefix} from '@angular/compiler';
+import {createUrlResolverWithoutPackagePrefix, NONE_TYPE} from '@angular/compiler';
 import { HomeworkService } from 'src/app/services/homework.service';
 @Component({
   selector: 'app-single-homework',
@@ -13,6 +13,9 @@ export class SingleHomeworkComponent implements OnInit {
 
   dueDateString = '';
   timeLeft = '';
+
+  darkenPanel: HTMLElement;
+  uploadDialog: HTMLElement;
   constructor(private homeworkService: HomeworkService) {
   }
 
@@ -26,6 +29,10 @@ export class SingleHomeworkComponent implements OnInit {
           + '.' + this.homework.due_date.getFullYear();
       this.timeLeft =this.convertTimeToString(this.homework.due_date.getTime() - new Date().getTime());
     });
+
+    this.darkenPanel = document.getElementById('darken-page');
+    this.uploadDialog = document.getElementById('dialog-window');
+    console.log(this.darkenPanel);
   }
 
   convertTimeToString(time: number): string {
@@ -41,5 +48,10 @@ export class SingleHomeworkComponent implements OnInit {
 
     const result = Math.floor(days) + 'д. ' + Math.floor(hours) + 'ч.';
     return result;
+  }
+
+  openUploadDialog(): void {
+    this.darkenPanel.style.visibility = 'visible';
+    this.uploadDialog.style.visibility = 'visible';
   }
 }

@@ -1,0 +1,48 @@
+@import "../../../themes/dark.scss";
+#main
+{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#upload-button-holder
+{
+  button
+  {
+    height: 100%;
+    width: 100%;
+  }
+  height: 10%;
+  width: 30%;
+  margin: 2%;
+}
+#uploader-files-panel
+{
+  background-color: $user-menu-background;
+
+  width: 80%;
+  height: 60%;
+  border-radius: 10px;
+
+  padding: 1%;
+  margin: 2%;
+}
+
+#send-cancel-buttons-holder
+{
+  button
+  {
+    height: 100%;
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: row-reverse;
+
+  height: 10%;
+  width: 60%;
+
+  margin: 2%;
+}
