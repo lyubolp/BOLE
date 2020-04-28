@@ -11,16 +11,9 @@ export class SingleHomeworkComponent implements OnInit {
 
   homework: Homework;
 
-  // courseName = 'Обектно-ориентирано програмиране - домашно 1';
-  // taskId = 1;
-  // attemptsLeft = 0;
-  // grade = 0;
+  dueDateString = '';
+  timeLeft = '';
   constructor(private homeworkService: HomeworkService) {
-    // pass `current` as an argument to the constructor or whatever
-    /*current: Homework = {};
-    this.taskId = current.id;
-    this.courseName = current.courseName;
-    this.attemptsLeft = current.attemptsLeft;*/
   }
 
   ngOnInit(): void {
@@ -29,6 +22,24 @@ export class SingleHomeworkComponent implements OnInit {
       this.homework = result;
       const doc: HTMLElement = document.getElementById('test');
       doc.setAttribute('src', '../../../assets/mockup_assets/hw-' + this.homework.grade.taskId.toString() + '.pdf');
+      this.dueDateString = this.homework.due_date.getDate() + '.' + this.homework.due_date.getMonth()
+          + '.' + this.homework.due_date.getFullYear();
+      this.timeLeft =this.convertTimeToString(this.homework.due_date.getTime() - new Date().getTime());
     });
+  }
+
+  convertTimeToString(time: number): string {
+    const millisecondsInASecond = 1000;
+    time /= millisecondsInASecond;
+
+    const secondsInAHour = 3600;
+    const secondsInADay = secondsInAHour * 24;
+
+
+    const days = (time / secondsInADay);
+    const hours = (time % secondsInADay) / secondsInAHour;
+
+    const result = Math.floor(days) + 'д. ' + Math.floor(hours) + 'ч.';
+    return result;
   }
 }

@@ -17,7 +17,7 @@ export class HomeworkService {
         name: 'Обектно-ориентирано програмиране'
       },
       name: 'Домашно 1',
-      due_date: new Date('25.12.2020'),
+      due_date: new Date('2020-12-25 23:55'),
       discussionId: 1,
       grade: {
         courseId: 1,

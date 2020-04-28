@@ -41,8 +41,8 @@
                 <span *ngIf="homework.grade.grade>=2">{{homework.grade.grade}}</span>
             </span>
             <button>Качи решение</button>
-            <button>Качи решение</button>
-            <button>Качи решение</button>
+            <button>Редактор на код</button>
+            <button>Свържи с github</button>
         </div>
 
         <div class="panel" id="due-date">
@@ -55,6 +55,14 @@
                 </svg>
                 <span class="panel-title">Краен срок</span>
             </div>
+            <div class="sub-container">
+                <span>До: {{dueDateString}}</span>
+            </div>
+            <div class="sub-container">
+                <span>Оставащо време: {{timeLeft}}</span>
+            </div>
+
+            <button>Молба за отлагане</button>
         </div>
     </div>
 </div>
