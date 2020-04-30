@@ -1,4 +1,4 @@
-<span class="page-title">{{homework.course.name}} - {{homework.name}}</span>
+<script src="../upload-homework/upload-homework.component.spec.ts"></script><span class="page-title">{{homework.course.name}} - {{homework.name}}</span>
 <div id="main">
     <div class="panel" id="task">
 
@@ -40,7 +40,7 @@
                 <span *ngIf="homework.grade.grade<2">Неоценен</span>
                 <span *ngIf="homework.grade.grade>=2">{{homework.grade.grade}}</span>
             </span>
-            <button>Качи решение</button>
+            <button (click)="toogleUploadDialog()">Качи решение</button>
             <button>Редактор на код</button>
             <button>Свържи с github</button>
         </div>
@@ -65,4 +65,10 @@
             <button>Молба за отлагане</button>
         </div>
     </div>
+</div>
+<div id="darken-page" class="darken-page">
+
+</div>
+<div id="dialog-window" class="dialog-window">
+ <app-upload-homework (dialogController)="toogleUploadDialog()"></app-upload-homework>
 </div>
