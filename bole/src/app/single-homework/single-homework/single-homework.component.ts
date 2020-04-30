@@ -50,8 +50,13 @@ export class SingleHomeworkComponent implements OnInit {
     return result;
   }
 
-  openUploadDialog(): void {
-    this.darkenPanel.style.visibility = 'visible';
-    this.uploadDialog.style.visibility = 'visible';
+  toogleUploadDialog(): void {
+    if (this.darkenPanel.style.visibility === 'visible') {
+      this.darkenPanel.style.visibility = 'hidden';
+      this.uploadDialog.style.visibility = 'hidden';
+    } else {
+      this.darkenPanel.style.visibility = 'visible';
+      this.uploadDialog.style.visibility = 'visible';
+    }
   }
 }
