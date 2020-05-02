@@ -17,6 +17,7 @@ export class SocialComponent implements OnInit {
   forumCourseCards: Forum[] = [];
   // searchText = '';
 
+  // probably should be moved to services
   ngOnInit(): void {
     this.forumService.getGeneralCards().subscribe((generalCards) => this.forumGeneralCards = generalCards);
     this.forumService.getCourseCards().subscribe((courseCards) => this.forumCourseCards = courseCards);
