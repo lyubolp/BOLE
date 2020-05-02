@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseCardSection } from '../../interfaces/course-card-section';
 import { CourseCardService } from 'src/app/services/course-card.service';
+import { CourseCard } from 'src/app/interfaces/course-card';
 
 @Component({
   selector: 'app-courses',
