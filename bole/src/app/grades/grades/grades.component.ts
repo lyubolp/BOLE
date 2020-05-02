@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GradesCard } from '../../interfaces/grades-card';
+import { GradesCardService } from 'src/app/services/grades-card.service';
 
 @Component({
   selector: 'app-grades',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grades.component.scss']
 })
 export class GradesComponent implements OnInit {
+  
+  cards: GradesCard[] = [];
 
-  constructor() { }
+  constructor(private gradesCardService: GradesCardService) {
+  }
 
   ngOnInit(): void {
+    this.gradesCardService.getGradesCards().subscribe((cards) => this.cards = cards);
   }
 
 }

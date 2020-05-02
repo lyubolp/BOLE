@@ -1,0 +1,22 @@
+@import "../../../themes/dark.scss";
+
+.grade-container {
+    margin: 10px;
+
+    .grade-name, .grade-bar, .weight {
+        display: inline-block;
+        zoom: 1;
+        width: 33%;
+        text-align: center;
+    }
+    .grade-bar{
+        background-color: $inactive-text;
+        border-radius: 10px;
+    }
+    .grade{
+        background-color: #4E84EE;
+        border-radius: 10px;
+        padding-left: 5px;
+        text-align: left;
+    }
+}

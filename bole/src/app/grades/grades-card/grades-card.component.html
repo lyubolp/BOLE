@@ -1,0 +1,7 @@
+<div class="grades-card">
+    <div class="color-strip"></div>
+    <div class="grades-name">{{gradesCard.courseName}}</div>
+    <div class="weight-header">Тежест към крайната оценка</div>
+    <app-grades-section *ngFor="let section of gradesCard.sections" [gradesSection]="section"></app-grades-section>
+    <div class="final-grade">Финална оценка: {{finalGrade}}</div>
+</div>
