@@ -1,5 +1,7 @@
 <span class="page-title">Домашни</span>
 <div id="panel-holder">
-    <app-summary-panel class="summary-panel" [colorCode]="colors[0]" [homeworkData]="homeworks[0]"></app-summary-panel>
-    <app-summary-panel class="summary-panel" [colorCode]="colors[1]" [homeworkData]="homeworks[1]"></app-summary-panel>
+    <a href="homeworks/homework">
+        <app-summary-panel class="summary-panel" *ngFor="let index of numbers"
+                           [colorCode]="colors[index]" [homeworkData]="homeworkCards[index]"></app-summary-panel>
+    </a>
 </div>
