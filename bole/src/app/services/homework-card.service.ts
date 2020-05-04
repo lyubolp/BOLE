@@ -15,7 +15,7 @@ export class HomeworkCardService {
         id: 0,
         name: 'Обектно-ориентиране',
       },
-      due_date: new Date('April 20, 2020 23:15:30'),
+      due_date:  new Date('2020-12-25 23:55'),
       discussion_id: 0,
       statement_id: 1
     });
@@ -25,7 +25,7 @@ export class HomeworkCardService {
         id: 2,
         name: 'Анализ на софтуерните изисквания',
       },
-      due_date: new Date('April 20, 2020 23:15:30'),
+      due_date:  new Date('2020-12-25 23:55'),
       discussion_id: 3,
       statement_id: 2
     });
