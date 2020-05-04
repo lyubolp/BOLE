@@ -6,7 +6,7 @@ import {CodeEditorComponent} from './code-editor/code-editor/code-editor.compone
 import {ProjectMainComponent} from './project-main/project-main/project-main.component';
 
 @NgModule({
-  declarations: [CodeEditorComponent, ProjectMainComponent],
+  declarations: [ProjectMainComponent],
   imports: [
     CommonModule,
     ProjectsRoutingModule
