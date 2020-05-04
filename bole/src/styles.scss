@@ -19,7 +19,73 @@ body {
         display: flex;
         flex-direction: column;
         height: 100%;
-        background: #1D2C39;
+        background: $page-background;
         overflow: auto;
     }
+
+    font: $menu-font;
+}
+
+.page-title
+{
+    font-size: 1.6em;
+    padding: 2%;
+    color: white;
+    text-decoration: underline;
+}
+
+.panel-title
+{
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: $menu-background;
+    margin: 1vw;
+    border-radius: 10px;
+    color: white;
+}
+
+.sub-container
+{
+    display: flex;
+    flex-direction: row;
+    height: 15%;
+    width: 90%;
+    align-items: center;
+    margin: 0.5% 5% 0.5% 5%;
+}
+
+button
+{
+    margin: 2.5%;
+    background-color: $buttons;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 0.8em;
+    width: 60%;
+    height: 12%;
+}
+
+.dialog-window
+{
+
+    visibility: hidden;
+    width: 40vw;
+    height: 60vh;
+    background-color: $panel-background;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    left: 30vw;
+    top: 20vh;
 }

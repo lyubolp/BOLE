@@ -1,0 +1,67 @@
+@import "../../../themes/dark";
+
+#main
+{
+  display: flex;
+  flex-direction: row;
+}
+
+#task
+{
+  width: 33vw;
+  height: 80vh;
+}
+
+#discussion
+{
+  width: 40vw;
+  height: 80vh;
+}
+
+#solution
+{
+  width: 15vw;
+  height: 38vh;
+}
+
+#due-date
+{
+  width: 15vw;
+  height: 38vh;
+}
+
+#vertical-separator
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.task-asset
+{
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 80%;
+}
+
+.svg
+{
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+.darken-page
+{
+  visibility: hidden;
+  position: absolute;
+  left:0px;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  background-color: $page-background;
+  opacity: 0.8;
+
+}
+span
+{
+  padding: 1%;
+}

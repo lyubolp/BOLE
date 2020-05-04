@@ -1,0 +1,19 @@
+@import '../../../themes/dark.scss';
+@import "../../../styles.scss";
+
+body
+{
+  background-color: $page-background;
+}
+#panel-holder
+{
+  display: flex;
+  flex-direction: row;
+}
+
+a
+{
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+}
