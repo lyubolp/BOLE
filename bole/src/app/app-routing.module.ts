@@ -10,8 +10,6 @@ const routes: Routes = [
   { path: 'grades', loadChildren: () => import('./grades/grades.module').then(m => m.GradesModule) },
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   { path: 'homeworks', loadChildren: () => import('./homeworks/homeworks.module').then(m => m.HomeworksModule) },
-  { path: 'homeworks/homework', loadChildren: () => import('./single-homework/single-homework.module').then(m => m.SingleHomeworkModule) },
-  { path: 'projects', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)},
   { path: 'social', loadChildren: () => import('./social/social.module').then(m => m.SocialModule) },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
   { path: '**', redirectTo: '' } // 404 -> redirect to HomeModule
