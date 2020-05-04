@@ -27,7 +27,7 @@ export class SingleHomeworkComponent implements OnInit {
       doc.setAttribute('src', '../../../assets/mockup_assets/hw-' + this.homework.grade.taskId.toString() + '.pdf');
       this.dueDateString = this.homework.due_date.getDate() + '.' + this.homework.due_date.getMonth()
           + '.' + this.homework.due_date.getFullYear();
-      this.timeLeft =this.convertTimeToString(this.homework.due_date.getTime() - new Date().getTime());
+      this.timeLeft = this.convertTimeToString(this.homework.due_date.getTime() - new Date().getTime());
     });
 
     this.darkenPanel = document.getElementById('darken-page');
