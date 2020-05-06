@@ -9,7 +9,8 @@
  */
 import {ProjectCard} from './project-card';
 
-export interface Project extends ProjectCard {
+export interface Project extends ProjectCard{
+    slack: string;
     github: string;
     cloudStorageId: number;
     kanbanBoardId: number;
