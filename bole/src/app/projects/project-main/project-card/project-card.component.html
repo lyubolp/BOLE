@@ -1,0 +1,32 @@
+<span class="page-title">Проекти</span>
+<div id="main" class="panel">
+    <div id="panel-color-code" style="background-color:{{colorCode}}" ></div>
+    <span class="panel-title">{{title}}</span>
+
+    <span id="description" class="sub-container">{{description}}</span>
+    <div id="due-date" class="sub-container">
+        <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="15%">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5
+             8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0
+              16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="#A70E0E"/>
+        </svg>
+        <span id="time-left">{{timeLeft}}</span>
+    </div>
+
+    <div id="members" class="sub-container">
+        <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="15%">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8
+            4v2h16v-2c0-2.66-5.33-4-8-4z" fill="#0C9134"/>
+            <path d="M0 0h24v24H0z" fill="none"/></svg>
+        <span>Участници: {{amountOfMembers}}</span>
+    </div>
+    <div id="new-messages" class="sub-container">
+        <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="15%">
+            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8
+             5H6v-2h8v2zm4-6H6V6h12v2z" fill="#5F14B4"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+        <span>Нови съобщения: {{newMessages}}</span>
+    </div>
+    </div>
