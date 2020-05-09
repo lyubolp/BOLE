@@ -7,9 +7,10 @@ import {ProjectMainComponent} from './project-main/project-main/project-main.com
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { CodeEditorModule } from './code-editor/code-editor.module';
 import {ProjectCardComponent} from './project-main/project-card/project-card.component';
+import { ProjectPageComponent } from './project-main/project-page/project-page.component';
 
 @NgModule({
-  declarations: [ProjectMainComponent, ProjectCardComponent],
+  declarations: [ProjectMainComponent, ProjectCardComponent, ProjectPageComponent],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
