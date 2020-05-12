@@ -1,0 +1,54 @@
+<span class="page-title">{{projectName}}</span>
+<div id="main">
+    <div id="left-side" class="panel">
+        <span class="panel-title"> Бързо меню</span>
+        <div class="buttons-holder">
+            <button class="left-side-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="70%" viewBox="0 0 24 24" width="70%">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0
+                     3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" fill="#FFFFFF"/>
+                </svg><br/>
+                Облак
+            </button>
+            <button class="left-side-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="70%" viewBox="0 0 24 24" width="70%">
+                    <path d="M0 0h24v24H0V0z" fill="none"/>
+                    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+                          fill="#FFFFFF"/>
+                </svg>
+                <br/>
+                Редактор на код
+            </button>
+            <button class="left-side-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="70%" height="70%">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="#FFFFFF"/>
+                </svg>
+                <br/>
+                Канбан дъска
+            </button>
+        </div>
+    </div>
+    <div id="chat" class="panel">
+        <span class="panel-title">Комуникация</span>
+    </div>
+    <div id="right-side" class="panel">
+        <span class="panel-title">Други</span>
+        <div class="buttons-holder">
+            <a href="{{githubLink}}" target="_blank">
+                <button class="right-side-button">Github</button>
+            </a>
+            <button class="right-side-button">Документация</button>
+            <button class="right-side-button">Изисквания</button>
+            <button (click)="toogleUploadDialog()" class="right-side-button">Екип и роли</button>
+        </div>
+    </div>
+</div>
+<div id="darken-page" class="darken-page">
+
+</div>
+<div id="dialog-window" class="dialog-window">
+    <app-team-dialog (dialogController)="toogleUploadDialog()"></app-team-dialog>
+</div>
+

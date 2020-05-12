@@ -8,9 +8,10 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { CodeEditorModule } from './code-editor/code-editor.module';
 import {ProjectCardComponent} from './project-main/project-card/project-card.component';
 import { ProjectPageComponent } from './project-main/project-page/project-page.component';
+import { TeamDialogComponent } from './project-main/team-dialog/team-dialog.component';
 
 @NgModule({
-  declarations: [ProjectMainComponent, ProjectCardComponent, ProjectPageComponent],
+  declarations: [ProjectMainComponent, ProjectCardComponent, ProjectPageComponent, TeamDialogComponent],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
