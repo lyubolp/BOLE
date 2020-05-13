@@ -63,6 +63,24 @@
                 </div>
             </a>
         </li>
+        <li>
+            <a routerLink="/projects" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
+                (mouseleave)="mouseLeaveNavItem($event)">
+                Проекти
+                <div class="underline-container" style='display: none;'>
+                    <div class="underline"></div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/work" routerLinkActive="active" (mouseenter)="mouseEnterNavItem($event)"
+                (mouseleave)="mouseLeaveNavItem($event)">
+                Работа
+                <div class="underline-container" style='display: none;'>
+                    <div class="underline"></div>
+                </div>
+            </a>
+        </li>
         <li *ngIf="router.url === '/courses'">
             <div class="search-bar">
                 <input type="text" placeholder="Filter courses..." (input)="filterCards()" [(ngModel)]="searchText">
