@@ -1,7 +1,5 @@
 import {AfterViewInit, Component,  ElementRef, ViewChild} from '@angular/core';
 
-declare const monaco: any;
-
 @Component({
   selector: 'app-code-editor',
   templateUrl: './code-editor.component.html',
@@ -9,6 +7,9 @@ declare const monaco: any;
 })
 
 export class CodeEditorComponent implements AfterViewInit {
+  options = { theme: 'vs-dark', language: 'javascript' };
+  code: string = 'function x() {\n\tconsole.log("Hello world!");\n}';
+
   @ViewChild('editor') editorContent: ElementRef;
 
   ngAfterViewInit() {
