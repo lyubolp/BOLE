@@ -245,8 +245,23 @@ export class CourseService {
         {
           id: 11,
           announcement: "Утре няма да има лекция",
-          date: new Date('02.03.2019 22:22')
-        }
+          date: new Date('06.03.2019 22:22')
+        },
+        {
+          id: 21,
+          announcement: "Домашно 3 е качено",
+          date: new Date('07.03.2019 22:22')
+        },
+        {
+          id: 22,
+          announcement: "Домашно 4 е качено",
+          date: new Date('08.03.2019 22:22')
+        },
+        {
+          id: 23,
+          announcement: "Домашно 5 е качено",
+          date: new Date('09.03.2019 22:22')
+        },
       ]
     });
   }

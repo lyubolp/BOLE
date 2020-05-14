@@ -13,7 +13,7 @@
         Материали
       </div>
       <div class="materials">
-        <div *ngFor="let section of course.sections" class="section">
+        <div *ngFor="let section of course.sections" class="section" (click)="clickSection($event)">
           <div class="section-title">
             <div class="section-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black" width="18px" height="18px">
@@ -22,7 +22,7 @@
             </div>
             <span>{{section.name}}</span>
           </div>
-          <div class="section-content">
+          <div class="section-content" style="display: none;">
             <ul>
               <li *ngFor="let resource of section.resourceLinks">
                 <a href="{{resource.link}}">
@@ -124,7 +124,7 @@
         </div>
         <div>
           <ul>
-            <li *ngFor="let ann of course.announcements">
+            <li *ngFor="let ann of this.announcements">
               <div class="announcement-date">
                 {{ann.date | date: "yyyy/MM/dd - HH:mm"}}
               </div>
@@ -134,7 +134,7 @@
             </li>
           </ul>
         </div>
-        <div class="all-anouncements">
+        <div class="all-anouncements" (click)="showAllAnnouncements()">
           Виж всички
         </div>
       </div>
