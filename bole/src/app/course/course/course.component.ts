@@ -16,12 +16,10 @@ export class CourseComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = +this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(this.id);
     this.getCourse();
   }
 
   getCourse(): void {
     this.courseService.getCourse(this.id).subscribe((result) => this.course = result);
-    console.log(this.course);
   }
 }
