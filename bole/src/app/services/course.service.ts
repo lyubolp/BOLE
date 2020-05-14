@@ -240,7 +240,7 @@ export class CourseService {
         {
           id: 10,
           announcement: "Домашно 2 е качено",
-          date: new Date('17.03.2019 22:22')
+          date: new Date('05.03.2019 22:22')
         },
         {
           id: 11,
