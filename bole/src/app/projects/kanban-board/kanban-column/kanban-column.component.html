@@ -1,0 +1,5 @@
+<div id="main" class="panel">
+    <span class="panel-title">{{name}}</span>
+    <app-kanban-card *ngFor="let card of cards" [cardData]="card" class="card"></app-kanban-card>
+    <button>Добави</button>
+</div>

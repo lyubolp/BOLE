@@ -1,0 +1,22 @@
+@import "../../../../styles.scss";
+@import "../../../../themes/dark.scss";
+
+#main
+{
+  width: 20vw;
+  height: 80vh;
+  display:flex;
+  flex-direction: column;
+}
+
+.card{
+  width: 94%;
+  height: 12%;
+  margin: 3%;
+}
+
+button
+{
+  width: 50%;
+  height:5%;
+}
