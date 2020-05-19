@@ -14,6 +14,8 @@ const routes: Routes = [
   { path: 'projects', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)},
   { path: 'social', loadChildren: () => import('./social/social.module').then(m => m.SocialModule) },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
+  { path: 'register', loadChildren: () => import('./register/register.module').then(m => m.RegisterModule) },
   { path: '**', redirectTo: '' } // 404 -> redirect to HomeModule
 ];
 
