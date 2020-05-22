@@ -4,35 +4,35 @@ div {
     display: flex;
     flex-direction: column;
     background-color: $menu-background;
-    padding: 10px;
-    margin: 10px;
+    padding: 0.5em;
+    margin: 0.5em;
     a {
         color: white;
         text-decoration: none;
     }
 }
 .grades-card {
-    width: 450px;
-    border-radius: 10px;
+    width: 28em;
+    border-radius: 0.5em;
 }
 .grades-name {
-    font-size: 24px;
+    font-size: 1.5em;
     text-align: center;
 }
 .color-strip {
     background-color: $inactive-text;
-    height: 5px;
-    margin: 10px;
-    padding: 10px;
+    height: 0.5em;
+    margin: 0.25em;
+    padding: 0.5em;
 }
 
 .weight-header {
     text-align: right;
     position: relative;
-    left: 300px; //--------------- shitty -------------
+    left: 300px;
     width: 25%;
     word-wrap: normal;
     padding: 0;
-    margin: 0;
+    margin: 0 0 -2em 0;
     text-align: center;
 }

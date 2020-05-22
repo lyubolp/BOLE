@@ -9,12 +9,21 @@ import { GradesCard } from '../../interfaces/grades-card';
 export class GradesCardComponent implements OnInit {
 
   @Input() gradesCard: GradesCard;
-  
-  finalGrade: number; // ---------------- calculate final grade ----------------
+
+  finalGrade: number;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.calculateFinalGrade();
   }
-
+  
+  calculateFinalGrade() {
+    this.finalGrade = 0;
+    this.gradesCard.sections.forEach(section => {
+      section.grades.forEach(grade => {
+        this.finalGrade += grade.grade * (grade.weight / 100);
+      });
+    });
+  }
 }
