@@ -16,7 +16,7 @@ export class KanbanBoardComponent implements OnInit {
   loadMockupBoard(): void {
     const toDoColumn: Column = {name: 'Незапочнати', cards: []};
     toDoColumn.cards.push({name: 'Нова икона', description: 'Да бъде създадена нова икона на приложението',
-                            priority: Priority.Low, assignees: [1], dueDate: new Date('2020-05-25')});
+                            priority: Priority.Low, assignees: [1, 2, 3, 4], dueDate: new Date('2020-05-25')});
 
     toDoColumn.cards.push({name: 'Чат', description: 'Да бъде създаден чат модула',
       priority: Priority.Medium, assignees: [1, 2], dueDate: new Date('2020-05-25')});
@@ -27,10 +27,10 @@ export class KanbanBoardComponent implements OnInit {
     const inProgressColumn: Column = {name: 'В процес на работа', cards: []};
 
     inProgressColumn.cards.push({name: 'Kanban дъска', description: 'Да бъде създадена Kanban функционалността в приложението',
-      priority: Priority.Low, assignees: [1], dueDate: new Date('2020-06-15')});
+      priority: Priority.Low, assignees: [1, 2], dueDate: new Date('2020-06-15')});
 
     inProgressColumn.cards.push({name: 'Оценка', description: 'Добавяне на връзка с базата данни при модула с оценки',
-      priority: Priority.Low, assignees: [4], dueDate: new Date('2020-06-15')});
+      priority: Priority.Low, assignees: [3, 4], dueDate: new Date('2020-06-15')});
 
     inProgressColumn.cards.push({name: 'Компоненти към модул "Проекти"',
       description: 'Създаване на необходимите компоненти, свързани с модул "Проекти"',
