@@ -15,25 +15,25 @@ export class GradesCardService {
       sections: [
         {
           name: 'Домашни', grades: [
-            { studentId: 1, courseId: 1, taskId: 1, taskName: 'Домашно 1', gradeMax: 10, grade: 8, weight: 5 },
-            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 2', gradeMax: 10, grade: 6, weight: 5 },
-            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 3', gradeMax: 10, grade: 10, weight: 5 }
+            { studentId: 1, courseId: 1, taskId: 1, taskName: 'Домашно 1', gradeMax: 10, gradeMin: 0, grade: 8, weight: 5 },
+            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 2', gradeMax: 10, gradeMin: 0, grade: 6, weight: 5 },
+            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 3', gradeMax: 10, gradeMin: 0, grade: 10, weight: 5 }
           ]
         },
         {
           name: 'Контролни', grades: [
-            { studentId: 1, courseId: 1, taskId: 3, taskName: 'Контролно 1', gradeMax: 10, grade: 6, weight: 10 },
-            { studentId: 1, courseId: 1, taskId: 4, taskName: 'Контролно 2', gradeMax: 10, grade: 7, weight: 10 }
+            { studentId: 1, courseId: 1, taskId: 3, taskName: 'Контролно 1', gradeMax: 10, gradeMin: 0, grade: 6, weight: 10 },
+            { studentId: 1, courseId: 1, taskId: 4, taskName: 'Контролно 2', gradeMax: 10, gradeMin: 0, grade: 7, weight: 10 }
           ]
         },
         {
           name: 'Курсов проект', grades: [
-            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Проект', gradeMax: 10, grade: 9, weight: 25 }
+            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Проект', gradeMax: 10, gradeMin: 0, grade: 9, weight: 25 }
           ]
         },
         {
           name: 'Изпит', grades: [
-            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Изпит', gradeMax: 10, grade: 8, weight: 40 }
+            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Изпит', gradeMax: 10, gradeMin: 0, grade: 8, weight: 40 }
           ]
         }
       ]
@@ -43,25 +43,25 @@ export class GradesCardService {
       sections: [
         {
           name: 'Домашни', grades: [
-            { studentId: 1, courseId: 1, taskId: 1, taskName: 'Домашно 1', gradeMax: 10, grade: 8, weight: 5 },
-            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 2', gradeMax: 10, grade: 0, weight: 5 },
-            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 3', gradeMax: 10, grade: 0, weight: 5 }
+            { studentId: 1, courseId: 1, taskId: 1, taskName: 'Домашно 1', gradeMax: 10, gradeMin: 0, grade: 8, weight: 5 },
+            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 2', gradeMax: 10, gradeMin: 0, grade: 0, weight: 5 },
+            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 3', gradeMax: 10, gradeMin: 0, grade: 0, weight: 5 }
           ]
         },
         {
           name: 'Контролни', grades: [
-            { studentId: 1, courseId: 1, taskId: 3, taskName: 'Контролно 1', gradeMax: 10, grade: 6, weight: 10 },
-            { studentId: 1, courseId: 1, taskId: 4, taskName: 'Контролно 2', gradeMax: 10, grade: 0, weight: 10 }
+            { studentId: 1, courseId: 1, taskId: 3, taskName: 'Контролно 1', gradeMax: 10, gradeMin: 0, grade: 6, weight: 10 },
+            { studentId: 1, courseId: 1, taskId: 4, taskName: 'Контролно 2', gradeMax: 10, gradeMin: 0, grade: 0, weight: 10 }
           ]
         },
         {
           name: 'Курсов проект', grades: [
-            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Проект', gradeMax: 10, grade: 0, weight: 25 }
+            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Проект', gradeMax: 10, gradeMin: 0, grade: 0, weight: 25 }
           ]
         },
         {
           name: 'Изпит', grades: [
-            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Изпит', gradeMax: 10, grade: 0, weight: 40 }
+            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Изпит', gradeMax: 10, gradeMin: 0, grade: 0, weight: 40 }
           ]
         }
       ]
@@ -71,25 +71,25 @@ export class GradesCardService {
       sections: [
         {
           name: 'Домашни', grades: [
-            { studentId: 1, courseId: 1, taskId: 1, taskName: 'Домашно 1', gradeMax: 10, grade: 8, weight: 5 },
-            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 2', gradeMax: 10, grade: 0, weight: 5 },
-            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 3', gradeMax: 10, grade: 0, weight: 5 }
+            { studentId: 1, courseId: 1, taskId: 1, taskName: 'Домашно 1', gradeMax: 10, gradeMin: 0, grade: 8, weight: 5 },
+            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 2', gradeMax: 10, gradeMin: 0, grade: 0, weight: 5 },
+            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 3', gradeMax: 10, gradeMin: 0, grade: 0, weight: 5 }
           ]
         },
         {
           name: 'Контролни', grades: [
-            { studentId: 1, courseId: 1, taskId: 3, taskName: 'Контролно 1', gradeMax: 10, grade: 6, weight: 10 },
-            { studentId: 1, courseId: 1, taskId: 4, taskName: 'Контролно 2', gradeMax: 10, grade: 0, weight: 10 }
+            { studentId: 1, courseId: 1, taskId: 3, taskName: 'Контролно 1', gradeMax: 10, gradeMin: 0, grade: 6, weight: 10 },
+            { studentId: 1, courseId: 1, taskId: 4, taskName: 'Контролно 2', gradeMax: 10, gradeMin: 0, grade: 0, weight: 10 }
           ]
         },
         {
           name: 'Курсов проект', grades: [
-            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Проект', gradeMax: 10, grade: 0, weight: 25 }
+            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Проект', gradeMax: 10, gradeMin: 0, grade: 0, weight: 25 }
           ]
         },
         {
           name: 'Изпит', grades: [
-            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Изпит', gradeMax: 10, grade: 0, weight: 40 }
+            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Изпит', gradeMax: 10, gradeMin: 0, grade: 0, weight: 40 }
           ]
         }
       ]
@@ -99,25 +99,25 @@ export class GradesCardService {
       sections: [
         {
           name: 'Домашни', grades: [
-            { studentId: 1, courseId: 1, taskId: 1, taskName: 'Домашно 1', gradeMax: 10, grade: 8, weight: 5 },
-            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 2', gradeMax: 10, grade: 0, weight: 5 },
-            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 3', gradeMax: 10, grade: 0, weight: 5 }
+            { studentId: 1, courseId: 1, taskId: 1, taskName: 'Домашно 1', gradeMax: 10, gradeMin: 0, grade: 8, weight: 5 },
+            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 2', gradeMax: 10, gradeMin: 0, grade: 0, weight: 5 },
+            { studentId: 1, courseId: 1, taskId: 2, taskName: 'Домашно 3', gradeMax: 10, gradeMin: 0, grade: 0, weight: 5 }
           ]
         },
         {
           name: 'Контролни', grades: [
-            { studentId: 1, courseId: 1, taskId: 3, taskName: 'Контролно 1', gradeMax: 10, grade: 6, weight: 10 },
-            { studentId: 1, courseId: 1, taskId: 4, taskName: 'Контролно 2', gradeMax: 10, grade: 0, weight: 10 }
+            { studentId: 1, courseId: 1, taskId: 3, taskName: 'Контролно 1', gradeMax: 10, gradeMin: 0, grade: 6, weight: 10 },
+            { studentId: 1, courseId: 1, taskId: 4, taskName: 'Контролно 2', gradeMax: 10, gradeMin: 0, grade: 0, weight: 10 }
           ]
         },
         {
           name: 'Курсов проект', grades: [
-            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Проект', gradeMax: 10, grade: 0, weight: 25 }
+            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Проект', gradeMax: 10, gradeMin: 0, grade: 0, weight: 25 }
           ]
         },
         {
           name: 'Изпит', grades: [
-            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Изпит', gradeMax: 10, grade: 0, weight: 40 }
+            { studentId: 1, courseId: 1, taskId: 5, taskName: 'Изпит', gradeMax: 10, gradeMin: 0, grade: 0, weight: 40 }
           ]
         }
       ]

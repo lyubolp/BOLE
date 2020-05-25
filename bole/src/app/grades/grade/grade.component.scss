@@ -6,7 +6,7 @@
     .grade-name, .grade-bar, .weight {
         position: relative;
         display: inline-block;
-        height: 20px;
+        height: 1em;
         width: 33%;
         text-align: center;
     }
@@ -16,14 +16,12 @@
     }
     .grade-fill{
         position: relative;
-        height: 20px;
+        height: 1em;
         background-color: #4E84EE;
         border-radius: 1em;
     }
     .grade-number{
         position: relative;
         margin-top: -20px;
-        color: black;
-        font-size: 1.2em;
     }
 }
