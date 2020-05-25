@@ -1,0 +1,38 @@
+@import "../../../themes/dark.scss";
+
+#container {
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    padding: 0 15% 0 15%;
+    width: 70%;
+
+    #forum-name {
+        text-align: left;
+        font-size: 2em;
+        margin: 2%;
+        margin-bottom: 0.5em;
+        color: $inactive-text;
+    }
+    #forum-threads {
+        width: 100%;
+    }
+    h1 {
+        text-align: left;
+        margin: 2%;
+        margin-bottom: 0.5em;
+        color: $inactive-text;
+    }
+}
+.darken-page
+{
+    visibility: hidden;
+    position: absolute;
+    left:0px;
+    top:0px;
+    width: 100%;
+    height: 100%;
+    background-color: $page-background;
+    opacity: 0.8;
+
+}

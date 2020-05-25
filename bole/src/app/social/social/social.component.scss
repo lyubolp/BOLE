@@ -1,0 +1,24 @@
+@import "../../../themes/dark.scss";
+
+#container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 15% 0 15%;
+    
+    #forum-threads {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+
+    }
+    h1{
+        text-align: left;
+        margin: 2%;
+        margin-bottom: 0.5em;
+        color: $inactive-text;
+        font-size: 2em;
+    }
+}
