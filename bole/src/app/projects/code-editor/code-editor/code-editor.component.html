@@ -1,1 +1,10 @@
-<ngx-monaco-editor [options]="options" [(ngModel)]="code"></ngx-monaco-editor>
+<div id="main">
+    <div id="buttons">
+        <button>Отваряне</button>
+        <button>Запазване като...</button>
+        <button>Редактиране</button>
+        <button>Изглед</button>
+        <button>Изпълнение</button>
+    </div>
+    <ngx-monaco-editor [options]="options" [(ngModel)]="code"></ngx-monaco-editor>
+</div>
