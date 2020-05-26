@@ -1,0 +1,34 @@
+@import "../../../themes/dark.scss";
+
+#user-container {
+    margin: auto;
+    width: 20em;
+    height: 20em;
+    background-color: $page-background;
+}
+#avatar {
+    border-radius: 50%;
+    background-color: $avatar-background;
+    margin-left: 10px;
+    padding: 2px;
+
+    img {
+        width: 27px;
+        height: 27px;
+    }
+}
+ul{
+    list-style-type: none;
+}
+#name{
+
+}
+#email{
+
+}
+#general-info{
+
+}
+#courses{
+    
+}

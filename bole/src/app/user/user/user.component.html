@@ -1,1 +1,19 @@
-<p>user works!</p>
+<span class="page-title">Профил</span>
+<div id="user-container" class="panel">
+    <div id="avatar">
+        <img [src]="picture" alt="">
+    </div>
+    <div id="general-info">Обща информация
+            <div id="name">Име: {{user.firstName}} {{user.lastName}}</div>
+            <div id="email">Имейл: {{user.email}}</div>
+    </div>
+    <div id="courses">Записани курсове
+        <ul>
+            <li *ngFor="let section of courseSections">{{section.name}}
+                <ul>
+                    <li *ngFor="let course of section.cards">{{course.name}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
