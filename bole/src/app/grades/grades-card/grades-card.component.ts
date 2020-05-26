@@ -9,7 +9,7 @@ import { GradesCard } from '../../interfaces/grades-card';
 export class GradesCardComponent implements OnInit {
 
   @Input() gradesCard: GradesCard;
-
+  @Input() colorCode: string;
   finalGrade: number;
 
   constructor() { }
@@ -17,7 +17,6 @@ export class GradesCardComponent implements OnInit {
   ngOnInit(): void {
     this.calculateFinalGrade();
   }
-  
   calculateFinalGrade() {
     this.finalGrade = 0;
     this.gradesCard.sections.forEach(section => {
