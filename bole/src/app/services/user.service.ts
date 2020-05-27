@@ -19,7 +19,7 @@ export class UserService {
       picture: "assets/icons/person-24px.svg",
       occupation: "Student",
       institution: "Sofia University",
-      CVLink: "test",
+      CVLink: "link",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     })
     this.users.push({
@@ -31,7 +31,7 @@ export class UserService {
       picture: "assets/icons/person-24px.svg",
       occupation: "Trainee",
       institution: "Microsoft",
-      CVLink: "test",
+      CVLink: "link",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     })
   }

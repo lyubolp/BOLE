@@ -1,9 +1,9 @@
 @import "../../../themes/dark.scss";
 
 #user-container {
-    margin: auto;
-    margin-top: 5%;
-    width: 60em;
+    //margin: auto;
+    margin-top: 4%;
+    //width: 60em;
     background-color: $panel-background;
     display: flex;
     flex-direction: row;
@@ -17,6 +17,7 @@
     background-color: $avatar-background;
     padding: 2px;
     margin: 2em;
+    margin-left: 4em;
     width: 8em;
     height: 8em;
 
@@ -33,7 +34,7 @@ ul{
     margin: 1em;
 }
 #general-info, #courses, #bio{
-    width: 15em;
+    width: 23em;
     align-items: center;
     background-color: $page-background;
     margin: 3em 2em 3em 2em;
@@ -47,4 +48,7 @@ h2{
 }
 li{
     margin: 0.5em 0.5em 0.5em 0.5em;
+}
+a{
+    color: $active-text;
 }

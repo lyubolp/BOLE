@@ -10,7 +10,9 @@
             <div id="name">{{user.firstName}} {{user.lastName}}</div>
             <div id="email">{{user.email}}</div>
             <div id="occupation-institution">{{user.occupation}} @ {{user.institution}}</div>
-            <div id="cv">CV: {{user.CVLink}}</div>
+            <div id="cv">CV:
+                <a href="/">{{user.CVLink}}</a>
+            </div>
         </div>
     </div>
     <div id="courses">
