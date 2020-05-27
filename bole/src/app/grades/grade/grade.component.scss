@@ -1,0 +1,27 @@
+@import "../../../themes/dark.scss";
+
+.grade-container {
+    margin: 10px;
+
+    .grade-name, .grade-bar, .weight {
+        position: relative;
+        display: inline-block;
+        height: 1em;
+        width: 33%;
+        text-align: center;
+    }
+    .grade-bar{
+        background-color: $inactive-text;
+        border-radius: 1em;
+    }
+    .grade-fill{
+        position: relative;
+        height: 1em;
+        background-color: #4E84EE;
+        border-radius: 1em;
+    }
+    .grade-number{
+        position: relative;
+        margin-top: -20px;
+    }
+}

@@ -1,0 +1,11 @@
+<div class="grade-container">
+    <div class="grade-name">{{grade.taskName}}</div>
+    <div class="grade-bar">
+        <div class="grade-fill" [style.width.%]="calculatedWidth > 0 ? calculatedWidth : 100"
+            [style.background-color]="calculatedWidth == 0 ? '#AAAAAA' : '#4E84EE'"></div>
+        <div class="grade-number">
+            {{grade.grade}}/{{grade.gradeMax}}
+        </div>
+    </div>
+    <div class="weight">{{grade.weight}}%</div>
+</div>
