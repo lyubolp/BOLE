@@ -10,6 +10,7 @@ import { CourseAnnouncement } from './course-announcement';
 export interface Course {
     id: number;
     name: string;
+    subName: string;
     sections: CourseSection[];
     pinned: CourseSection;
     announcements: CourseAnnouncement[];

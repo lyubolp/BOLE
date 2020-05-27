@@ -2,7 +2,6 @@
 
 div {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 280px;
@@ -11,6 +10,7 @@ div {
     margin: 10px;
 
     a {
+        text-align: center;
         color: white;
         text-decoration: none;
     }
