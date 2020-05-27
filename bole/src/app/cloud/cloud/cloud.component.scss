@@ -1,0 +1,24 @@
+@import '../../../themes/dark.scss';
+@import "../../../styles.scss";
+
+button
+{
+    margin: 0.5%;
+    background-color: $buttons;
+    border: none;
+    color: white;
+    font-size: 0.8em;
+    width: 10%;
+    height: 12%;
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: $menu-background;
+    margin: 1vw;
+    border-radius: 10px;
+    color: white;
+}
