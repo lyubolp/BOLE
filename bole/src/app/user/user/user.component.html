@@ -3,13 +3,20 @@
     <div id="avatar">
         <img [src]="picture" alt="">
     </div>
-    <div id="general-info">Обща информация
-            <div id="name">Име: {{user.firstName}} {{user.lastName}}</div>
-            <div id="email">Имейл: {{user.email}}</div>
+    <div id="info">
+        <div id="bio">{{user.bio}}</div>
+        <div id="general-info">
+            <h2>Обща информация</h2>
+            <div id="name">{{user.firstName}} {{user.lastName}}</div>
+            <div id="email">{{user.email}}</div>
+            <div id="occupation-institution">{{user.occupation}} @ {{user.institution}}</div>
+            <div id="cv">CV: {{user.CVLink}}</div>
+        </div>
     </div>
-    <div id="courses">Записани курсове
+    <div id="courses">
+        <h2>Записани курсове</h2>
         <ul>
-            <li *ngFor="let section of courseSections">{{section.name}}
+            <li *ngFor="let section of courseSections">
                 <ul>
                     <li *ngFor="let course of section.cards">{{course.name}}</li>
                 </ul>

@@ -8,4 +8,8 @@ export interface User {
     dateJoined: Date;
     email: string;
     picture: string; //path to picture
+    occupation: string;
+    institution: string;
+    CVLink: string;
+    bio: string;
 }
