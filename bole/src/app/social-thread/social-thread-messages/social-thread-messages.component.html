@@ -1,0 +1,15 @@
+<div id="messages-container">
+    <ul>
+        <li *ngFor="let message of messages">
+            <div class="message-card">
+                <div class="sender">{{message.authorUsername}}:</div>
+                <div class="message">{{message.message}}</div>
+            </div>
+        </li>
+    </ul>
+    <input [(ngModel)]="newMessage" name="write-message" type="text" placeholder="Write message" (keyup.enter)="sendMessage()" >
+    <div id="button-holder">
+        <button id="submit-button" (click)="sendMessage()">Send</button>
+        <button id="close-button" (click)="closeDialog()">Close</button>
+    </div>
+</div>

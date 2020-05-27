@@ -6,6 +6,7 @@ export interface ForumMessage {
     id: number;
     threadId: number;
     authorId: number;
+    authorUsername: string;
     message: string;
     date: Date;
 }

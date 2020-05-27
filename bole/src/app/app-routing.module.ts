@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'homeworks/homework', loadChildren: () => import('./single-homework/single-homework.module').then(m => m.SingleHomeworkModule) },
   { path: 'projects', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)},
   { path: 'social', loadChildren: () => import('./social/social.module').then(m => m.SocialModule) },
+  { path: 'social/thread', loadChildren: () => import('./social-thread/social-thread.module').then(m => m.SocialThreadModule) },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
   { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
   { path: 'register', loadChildren: () => import('./register/register.module').then(m => m.RegisterModule) },
