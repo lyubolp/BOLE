@@ -65,7 +65,6 @@ export class KanbanCardComponent implements OnInit {
       return;
     }
     console.log(e.target.id);
-    console.log("Called");
     document.getElementById('card-main').classList.add('card-main-opened');
     document.getElementById('time-left-icon').style.display = 'none';
     document.getElementById('priority-buttons').style.display = 'block';
