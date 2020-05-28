@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Forum, ForumCategory } from '../../interfaces/forum';
+import { Forum } from '../../interfaces/forum';
 
 @Component({
   selector: 'app-social-card',

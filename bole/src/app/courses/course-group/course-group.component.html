@@ -1,8 +1,8 @@
-<div class="courses-group">
+<div *ngIf="filteredCards.length !== 0" class="courses-group">
     <h1>
-        {{courseGroup.name}}
+        {{section.name}}
     </h1>
     <div class="cards-container">
-        <app-course-card *ngFor="let card of courseGroup.cards" [courseCard]="card"></app-course-card>
+        <app-course-card *ngFor="let card of filteredCards" [courseCard]="card"></app-course-card>
     </div>
 </div>
