@@ -19,7 +19,7 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userService.getUser(0).subscribe((user) => this.user = user);
+    this.userService.getUserById(1).subscribe((user) => this.user = user);
     this.courseCardService.getCourseCardSections().subscribe((sections) => this.courseSections = sections);
     console.log(this.courseSections);
     console.log(this.user);

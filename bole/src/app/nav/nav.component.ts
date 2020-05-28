@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchBarService } from '../services/search-bar.service';
+import { LoginService } from '../services/login.service';
+import { User } from '../interfaces/user';
 
 @Component({
   selector: 'app-nav',
@@ -8,17 +10,27 @@ import { SearchBarService } from '../services/search-bar.service';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  username = 'Гост';
+  user: User;
+  userLoggedIn = false;
   avatar = 'assets/icons/person-24px.svg';
+
   userDropdown: HTMLElement;
   searchText:string = '';
 
-  constructor(public router: Router, private searchBarService: SearchBarService) { }
+  constructor(public router: Router, private searchBarService: SearchBarService, private loginService: LoginService) { }
 
   ngOnInit() {
-    if (!this.userDropdown) {
-      this.userDropdown = document.getElementById('user-dropdown');
-    }
+    this.loginService.user.subscribe(user => {
+      this.user = user;
+      
+      if (this.user.userId === -1) {
+        this.userLoggedIn = false;
+      } else {
+        this.userLoggedIn = true;
+      }
+    });
+
+    this.userDropdown = document.getElementById('user-dropdown');
 
     // Hide the user drop down menu if clicked outside
     document.addEventListener('click', (event) => {
@@ -62,5 +74,9 @@ export class NavComponent implements OnInit {
         this.userDropdown.style.visibility = '';
       }
     }
+  }
+
+  logout(): void {
+    this.loginService.changeUser("");
   }
 }

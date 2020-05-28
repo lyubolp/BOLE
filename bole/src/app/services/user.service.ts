@@ -11,7 +11,21 @@ export class UserService {
 
   constructor() {
     this.users.push({
+      userId: -1,
+      username: "",
+      firstName: "Гост",
+      lastName: "",
+      dateJoined: new Date(),
+      email: "",
+      picture: "assets/icons/person-24px.svg",
+      occupation: "",
+      institution: "",
+      CVLink: "",
+      bio: "",
+    });
+    this.users.push({
       userId: 1,
+      username: "ivan",
       firstName: "Иван",
       lastName: "Иванов",
       dateJoined: new Date('2020-02-15 13:45'),
@@ -24,6 +38,7 @@ export class UserService {
     })
     this.users.push({
       userId: 2,
+      username: "georgi",
       firstName: "Георги",
       lastName: "Георгиев",
       dateJoined: new Date('2020-03-16 15:12'),
@@ -35,7 +50,12 @@ export class UserService {
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     })
   }
-  getUser(id: number): Observable<User> {
-    return of(this.users[id]);
+
+  getUserById(id: number): Observable<User> {
+    return of(this.users.find(user => user.userId === id));
+  }
+
+  getUserByUsername(username: string): Observable<User> {
+    return of(this.users.find(user => user.username === username));
   }
 }
