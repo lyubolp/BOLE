@@ -1,1 +1,28 @@
-<p>user works!</p>
+<span class="page-title">Профил</span>
+<div id="user-container" class="panel">
+    <div id="avatar">
+        <img [src]="picture" alt="">
+    </div>
+    <div id="info">
+        <div id="bio">{{user.bio}}</div>
+        <div id="general-info">
+            <h2>Обща информация</h2>
+            <div id="name">{{user.firstName}} {{user.lastName}}</div>
+            <div id="email">{{user.email}}</div>
+            <div id="occupation-institution">{{user.occupation}} @ {{user.institution}}</div>
+            <div id="cv">CV:
+                <a href="/">{{user.CVLink}}</a>
+            </div>
+        </div>
+    </div>
+    <div id="courses">
+        <h2>Записани курсове</h2>
+        <ul>
+            <li *ngFor="let section of courseSections">
+                <ul>
+                    <li *ngFor="let course of section.cards">{{course.name}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
