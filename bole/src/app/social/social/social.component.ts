@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Forum, ForumCategory } from '../../interfaces/forum';
 import { ForumService } from 'src/app/services/forum.service';
+import { SearchBarService } from 'src/app/services/search-bar.service';
 
 @Component({
   selector: 'app-social',
@@ -9,36 +10,37 @@ import { ForumService } from 'src/app/services/forum.service';
 })
 export class SocialComponent implements OnInit {
 
-  constructor(private forumService: ForumService) { }
+  constructor(private forumService: ForumService, private searchBarService: SearchBarService) { }
 
   colors: string[] = ['#203964', '#5B1001', '#35642A', '#2A6264', '#573278', '#2A557B'];
   forumGeneralCardsFiltered: Forum[] = [];
   forumCourseCardsFiltered: Forum[] = [];
   forumGeneralCards: Forum[] = [];
   forumCourseCards: Forum[] = [];
-  numbersGeneral: number[] = [];
-  numbersCourse: number[] = [];
+  searchText: string = '';
 
   ngOnInit(): void {
     this.forumService.getGeneralCards().subscribe((generalCards) => this.forumGeneralCards = generalCards);
     this.forumService.getCourseCards().subscribe((courseCards) => this.forumCourseCards = courseCards);
-    this.filterCards();
-    for (let i = 0; i < this.forumGeneralCardsFiltered.length; i++) {
-      this.numbersGeneral.push(i);
-    }
-    for (let i = 0; i < this.forumCourseCardsFiltered.length; i++) {
-      this.numbersCourse.push(i);
-    }
+    
+    this.searchBarService.currentSearch.subscribe(searchText => {
+      this.searchText = searchText.toLowerCase();
+      this.filterCards();
+    });
   }
 
   filterCards() {
-    // console.log(this.searchText);
-    // if (this.searchText === '') {
-    this.forumGeneralCardsFiltered = this.forumGeneralCards;
-    this.forumCourseCardsFiltered = this.forumCourseCards;
-    // } else {
-    //   this.forumGeneralCardsFiltered = this.forumGeneralCards.filter((generalCard) => generalCard.name.toLowerCase().includes(this.searchText.toLowerCase()));
-    //   this.forumCourseCardsFiltered = this.forumCourseCards.filter((personalCard) => personalCard.name.toLowerCase().includes(this.searchText.toLowerCase()));
-    // }
+    this.forumGeneralCardsFiltered = [];
+    this.forumGeneralCards.forEach(forum => {
+      if (forum.name.toLowerCase().includes(this.searchText)) {
+        this.forumGeneralCardsFiltered.push(forum);
+      }
+    });
+    this.forumCourseCardsFiltered = [];
+    this.forumCourseCards.forEach(forum => {
+      if (forum.name.toLowerCase().includes(this.searchText)) {
+        this.forumCourseCardsFiltered.push(forum);
+      }
+    });
   }
 }

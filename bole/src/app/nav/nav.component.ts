@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SearchBarService } from '../services/search-bar.service';
 
 @Component({
   selector: 'app-nav',
@@ -10,8 +11,9 @@ export class NavComponent implements OnInit {
   username = 'Гост';
   avatar = 'assets/icons/person-24px.svg';
   userDropdown: HTMLElement;
-  searchText = '';
-  constructor(public router: Router) { }
+  searchText:string = '';
+
+  constructor(public router: Router, private searchBarService: SearchBarService) { }
 
   ngOnInit() {
     if (!this.userDropdown) {
@@ -31,8 +33,8 @@ export class NavComponent implements OnInit {
     });
   }
 
-  filterCards() {
-    // TODO filter courses  
+  updateSearchText() {
+    this.searchBarService.changeSearchText(this.searchText);
   }
 
   mouseEnterNavItem(event: MouseEvent) {
@@ -48,6 +50,7 @@ export class NavComponent implements OnInit {
       (target.children[0] as HTMLElement).style.display = 'none';
     }
   }
+
   toggleUserDropdown(event: MouseEvent) {
     if (!this.userDropdown) {
       this.userDropdown = document.getElementById('user-dropdown');
