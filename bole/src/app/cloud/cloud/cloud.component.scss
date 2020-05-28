@@ -34,9 +34,29 @@ input#file-input{
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
 
     background: $menu-background;
     margin: 1vw;
     border-radius: 10px;
     color: white;
 }
+
+.file_item {
+    margin: 0.5%;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+    height: 90px;
+}
+
+h6 {
+    align-self: center;
+    max-width: 70px;
+    max-height: 70px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
