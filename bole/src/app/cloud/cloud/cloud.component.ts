@@ -12,4 +12,8 @@ export class CloudComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  name(event) {
+    let selectedFileName = event.target.files[0].name;
+    document.getElementById("file-name").textContent = selectedFileName;
+  }
 }

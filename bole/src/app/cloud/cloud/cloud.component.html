@@ -1,9 +1,14 @@
 <span class="page-title">Облак</span>
+<body>
 <div class="panel">
     <button type="button">Файл</button>
     <button routerLink="/projects/code-editor">Редактиране</button>
-    <input type="file" id="file-input" name="myFile"> 
+    <input type="file" id="file-input" name="myFile" (change)="name($event)"> 
     <label class="label_input" for="file-input">
         Отваряне
-    </label>  
+    </label>
+    <span>
+        <span id="file-name">No file selected</span> 
+    </span>  
 </div>
+</body>
