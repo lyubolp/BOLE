@@ -8,6 +8,7 @@ import { Forum, ForumCategory } from '../../interfaces/forum';
 })
 export class SocialCardComponent implements OnInit {
   @Input() Forum: Forum;
+  @Input() colorCode: string;
 
   constructor() { }
 

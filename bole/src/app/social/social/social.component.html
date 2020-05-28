@@ -5,11 +5,11 @@
     <div id="forum-threads">
         <h1>Общи</h1>
         <div id="general-social-card-container">
-            <app-social-card *ngFor="let generalCard of forumGeneralCardsFiltered" [Forum]="generalCard"></app-social-card>
+            <app-social-card *ngFor="let index of numbersGeneral" [Forum]="forumGeneralCardsFiltered[index]" [colorCode]="colors[index]"></app-social-card>
         </div>
         <h1>Курсове</h1>
         <div id="course-social-card-container">
-            <app-social-card *ngFor="let courseCard of forumCourseCardsFiltered" [Forum]="courseCard"></app-social-card>
+            <app-social-card *ngFor="let index of numbersCourse" [Forum]="forumCourseCardsFiltered[index]" [colorCode]="colors[index]"></app-social-card>
         </div>
     </div>
 </div>

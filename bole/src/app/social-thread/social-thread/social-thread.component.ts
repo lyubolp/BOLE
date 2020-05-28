@@ -11,12 +11,14 @@ export class SocialThreadComponent implements OnInit {
 
   constructor(private forumService: ForumService) { }
 
+  colors: string[] = ['#203964', '#5B1001', '#35642A', '#2A6264', '#573278', '#2A557B'];
   forumName: string;
   forumGroup: string;
   forumThreads: ForumThread[] = [];
   forumThreadsFiltered: ForumThread[] = [];
   darkenPanel: HTMLElement;
   messagesDialog: HTMLElement;
+  numbers: number[] = [];
 
   ngOnInit(): void {
     this.forumService.getThreads(1).subscribe((threads) => this.forumThreads = threads);
@@ -29,6 +31,10 @@ export class SocialThreadComponent implements OnInit {
     console.log(this.darkenPanel);
 
     this.filterCards();
+
+    for (let i = 0; i < this.forumThreadsFiltered.length; i++) {
+      this.numbers.push(i);
+    }
   }
   filterCards() {
     this.forumThreadsFiltered = this.forumThreads;

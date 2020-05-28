@@ -2,7 +2,7 @@
     <h1>{{forumGroup}}:</h1>
     <div id="forum-name">{{forumName}}</div>
     <div id="forum-threads">
-        <app-social-thread-card *ngFor="let thread of forumThreadsFiltered" [forumThread]="thread">
+        <app-social-thread-card *ngFor="let index of numbers" [forumThread]="forumThreadsFiltered[index]" [colorCode]="colors[index]">
         </app-social-thread-card>
         <div class="button" id="add-thread"></div>
     </div>

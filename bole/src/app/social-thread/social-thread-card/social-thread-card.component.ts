@@ -10,6 +10,7 @@ import { SocialThreadComponent } from '../social-thread/social-thread.component'
 export class SocialThreadCardComponent implements OnInit {
 
   @Input() forumThread: ForumThread;
+  @Input() colorCode: string;
 
   constructor( private thread: SocialThreadComponent) { }
 

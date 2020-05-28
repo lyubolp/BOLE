@@ -1,5 +1,5 @@
 <div id="card-container">
-    <div id="color-strip"></div> <!-- having trouble making this div have alternating colors for different cards -->
+    <div id="color-strip" [style.background-color]="colorCode"></div>
     <div id="left-collumn">
         <button (click)="toggleMessagesWindow()">{{forumThread.name}}</button>
     </div>
