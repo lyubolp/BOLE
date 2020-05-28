@@ -1,11 +1,11 @@
 <div id="container">
     <div id="forum-threads">
-        <h1>Общи</h1>
-        <div id="general-social-card-container">
+        <h1 *ngIf="forumGeneralCardsFiltered.length !== 0">Общи</h1>
+        <div *ngIf="forumGeneralCardsFiltered.length !== 0" id="general-social-card-container">
             <app-social-card *ngFor="let forum of forumGeneralCardsFiltered; index as i" [Forum]="forum" [colorCode]="colors[i % colors.length]"></app-social-card>
         </div>
-        <h1>Курсове</h1>
-        <div id="course-social-card-container">
+        <h1 *ngIf="forumCourseCardsFiltered.length !== 0">Курсове</h1>
+        <div *ngIf="forumCourseCardsFiltered.length !== 0" id="course-social-card-container">
             <app-social-card *ngFor="let forum of forumCourseCardsFiltered; index as i" [Forum]="forum" [colorCode]="colors[i % colors.length]"></app-social-card>
         </div>
     </div>
