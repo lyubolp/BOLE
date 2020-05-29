@@ -1,1 +1,45 @@
-<p>dashboard works!</p>
+<div class="container">
+    <div class="header">
+        <div class="title">
+            Табло
+        </div>
+    </div>
+    <div class="content">
+        <div class="courses">
+            <div class="sub-title">
+                Курсове
+            </div>
+            <div class="course-cards">
+                <app-course-card *ngFor="let card of courseCards" [courseCard]="card"></app-course-card>
+            </div>
+                <div class="view-all" (click)="redirect('courses')" >
+                    Виж всички
+                </div>
+        </div>
+        <div class="calendar">
+            <div class="sub-title">
+                Календар
+            </div>
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FSofia&amp;src=bWxmOWduYzZyaTI2YmsxZHE1cGw4aXYxYWdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%238E24AA&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;mode=MONTH&amp;showTabs=1&amp;showDate=1&amp;showCalendars=0&amp;hl=bg&amp;showTz=1"
+                style="border-width:0" height="500" frameborder="0" scrolling="no">
+            </iframe>
+            <div class="view-all">
+                Виж всички
+            </div>
+        </div>
+        <div class="tasks">
+            <div class="sub-title">
+                Списък със задачи
+            </div>
+            <ul>
+                <li *ngFor="let task of tasks">
+                    <a href="/course/{{task.courseId}}">{{task.title}}</a>
+                </li>
+            </ul>
+            <div class="view-all">
+                Виж всички
+            </div>
+        </div>
+    </div>
+</div>

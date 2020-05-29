@@ -1,0 +1,131 @@
+@import "../../../themes/dark.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 3em 2em 3em;
+    font-family: sans-serif;
+    align-content: center;
+
+    a {
+        text-decoration: none;
+        color: $active-text;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        margin-bottom: 0.4em;
+
+        .title {
+            margin-right: 1.5em;
+            font-size: 1.8em;
+            text-decoration: underline;
+            color: $active-text;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            background: $panel-background;
+            border-radius: 0.4em;
+            color: $active-text;
+            padding: 0.7em;
+            margin-right: 0.7em;
+            margin-bottom: 0.7em;
+
+            * {
+                display: flex;
+                flex: 1;
+            }
+            
+            .sub-title {
+                display: flex;
+                flex: 0;
+                text-decoration: underline;
+                font-size: 1.2em;
+                margin: 0em 0em 0.7em 0em;
+            }
+
+            .view-all {
+                display: flex;
+                flex: 0;
+                align-self: center;
+                background: $buttons;
+                font-size: 0.8em;
+                border-radius: 1em;
+                margin-top: 1em;
+                padding: 0.5em 1em 0.5em 1em;
+                cursor: pointer;
+            }
+        }
+
+        .courses {
+            width: 730px;
+            .course-cards {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-content: center;
+                justify-content: center;
+                margin: -1em 0 0 0;
+
+                > * {
+                    flex: 0;
+                    margin: 0.3em;
+                }
+                
+                :nth-child(6n + 1) {
+                    background: $course-1;
+                }
+                :nth-child(6n + 2) {
+                    background: $course-2;
+                }
+                :nth-child(6n + 3) {
+                    background: $course-3;
+                }
+                :nth-child(6n + 4) {
+                    background: $course-4;
+                }
+                :nth-child(6n + 5) {
+                    background: $course-5;
+                }
+                :nth-child(6n + 6) {
+                    background: $course-6;
+                }
+            }
+        }
+
+        .calendar {
+            flex: 1;
+            min-height: 500px;
+            min-width: 500px;
+        }
+
+        .tasks {
+            flex: 1;
+            min-width: 300px;
+            ul {
+                display: block;
+                margin-left: 1.5em;
+
+                li {
+                    margin-bottom: 0.5em;
+                }
+
+                li::before {
+                    padding-right: 0.5em;
+                    content: "-";
+                    text-indent: -5px;
+                }
+            }
+        }
+    }
+}
