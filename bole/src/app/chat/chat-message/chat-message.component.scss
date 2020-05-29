@@ -1,0 +1,17 @@
+@import "../../../themes/dark.scss";
+
+#message1, #message2{
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: row;
+}
+#message2{
+    flex-direction: row-reverse;
+    color: #4E84ED;
+}
+#date{
+    margin: 0.5em;
+}
+#message-text{
+    margin: 0.5em;
+}

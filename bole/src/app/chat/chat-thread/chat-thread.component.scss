@@ -1,0 +1,59 @@
+@import "../../../themes/dark.scss";
+
+.chat-thread {
+    background-color: $panel-background;
+    margin: 0.3em;
+    border-radius: 0.3em;
+}
+.user:hover {
+    cursor: pointer;
+    background-color: lighten($panel-background, 5);
+}
+
+img {
+    border-radius: 50%;
+    background-color: $avatar-background;
+    padding: 2px;
+    margin: 1em;
+    margin-bottom: 0.5em;
+    width: 3em;
+    height: 3em;
+}
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+}
+.user-name {
+    margin-left: 1em;
+    font-size: 1em;
+    user-select: none;
+}
+input {
+    height: 1.5em;
+    width: 60%;
+    background: lightslategray;
+    font-size: 0.8em;
+    outline: none;
+    padding: 0 0.5em 0 0.5em;
+    border-radius: 1em;
+    box-shadow: none;
+    border: 1px solid black;
+    box-shadow: -2px 3px 10px -2px rgba(30, 30, 30, 0.8);
+
+    &::placeholder {
+        color: #333;
+    }
+}
+button {
+    height: 1.5em;
+    width: 15%;
+    margin: 0;
+}
+.input-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5em 0 0.5em 0;
+}
