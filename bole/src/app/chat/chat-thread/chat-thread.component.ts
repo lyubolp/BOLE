@@ -10,26 +10,27 @@ export class ChatThreadComponent implements OnInit {
 
   @Input() thread: ChatThread = new ChatThread();
   picture: string;
-  threadHTML: HTMLElement;
-  userHTML: HTMLElement;
   newMessage: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
     this.picture = "assets/icons/person-24px.svg";
+    const hideMessages = document.getElementsByClassName('chat-messages');
+    for (let i = 0; i < hideMessages.length; i++) {
+      (hideMessages[i] as HTMLElement).style.visibility = 'hidden';
+      (hideMessages[i] as HTMLElement).style.height = '0';
+    }
   }
   toggleChatThread(event: MouseEvent) {
-    if (!this.threadHTML) {
-      this.threadHTML = document.getElementById('chat-messages');
-    }
-    if (this.threadHTML) {
-      if (this.threadHTML.style.visibility === '') {
-        this.threadHTML.style.visibility = 'hidden';
-        this.threadHTML.style.height = '0';
+    const target = (event.composedPath()[2] as HTMLElement).children.item(0).children.item(1) as HTMLElement;
+    if (target.className == 'chat-messages') {
+      if (target.style.visibility === '') {
+        target.style.visibility = 'hidden';
+        target.style.height = '0';
       } else {
-        this.threadHTML.style.visibility = '';
-        this.threadHTML.style.height = '100%';
+        target.style.visibility = '';
+        target.style.height = '100%';
       }
     }
   }
