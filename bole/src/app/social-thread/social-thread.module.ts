@@ -8,11 +8,14 @@ import { SocialThreadCardComponent } from './social-thread-card/social-thread-ca
 import { SocialThreadMessagesComponent } from './social-thread-messages/social-thread-messages.component';
 
 @NgModule({
-  declarations: [SocialThreadComponent, SocialThreadCardComponent, SocialThreadMessagesComponent],
-  imports: [
-    CommonModule,
-    SocialThreadRoutingModule,
-    FormsModule,
-  ]
+    declarations: [SocialThreadComponent, SocialThreadCardComponent, SocialThreadMessagesComponent],
+    exports: [
+        SocialThreadMessagesComponent
+    ],
+    imports: [
+        CommonModule,
+        SocialThreadRoutingModule,
+        FormsModule,
+    ]
 })
 export class SocialThreadModule { }

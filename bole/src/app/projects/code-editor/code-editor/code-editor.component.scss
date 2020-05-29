@@ -1,0 +1,53 @@
+@import "../../../../styles.scss";
+@import "../../../../themes/dark.scss";
+
+#buttons
+{
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+}
+
+button
+{
+  border-radius: 0px;
+  height: 90%;
+  margin: 0px;
+  background-color: $panel-background;
+}
+
+button:hover
+{
+  background-color: $menu-background-hover;
+}
+
+#main
+{
+  height: 90vh;
+  width:100%;
+}
+
+ngx-monaco-editor
+{
+  margin: 1%;
+  height: 85%;
+  width: 98%;
+}
+
+.dropdown
+{
+   display: none;
+  position: relative;
+  background-color: $menu-background;
+  color: white;
+  width: 20%;
+  z-index: 1;
+}
+li{
+  padding: 10px;
+  list-style-type: none;
+}
+li:hover
+{
+  background-color: $menu-background-hover;
+}

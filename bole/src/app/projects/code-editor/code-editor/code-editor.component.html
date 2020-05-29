@@ -1,1 +1,18 @@
-<ngx-monaco-editor [options]="options" [(ngModel)]="code"></ngx-monaco-editor>
+<div id="main">
+    <div id="buttons">
+        <button>Отваряне</button>
+        <button>Запазване като...</button>
+        <button (click)="showDropDown($event)">Редактиране</button>
+        <button (click)="showDropDown($event)">Изглед</button>
+        <button (click)="showDropDown($event)">Изпълнение</button>
+    </div>
+    <div id="dropdown" class="dropdown">
+        <ul>
+            <li>Опция 1</li>
+            <li>Опция 2</li>
+            <li>Опция 3</li>
+            <li>Опция 4</li>
+        </ul>
+    </div>
+    <ngx-monaco-editor [options]="options" [(ngModel)]="code"></ngx-monaco-editor>
+</div>

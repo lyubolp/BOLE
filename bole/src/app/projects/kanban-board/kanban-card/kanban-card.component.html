@@ -1,0 +1,47 @@
+<div id="card-main" (click)="openCard($event)">
+    <span id="card-title" class="panel-title">{{name}}</span>
+    <div id="time-left-container">
+        <svg id='time-left-icon' xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="10%">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM12.5
+             8H11v6l4.75 2.85.75-1.23-4-2.37V8zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0
+              16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="#A70E0E"/>
+        </svg>
+        <span id="time-left-text" class="hide-element">Оставащо време</span>
+        <span>{{timeLeft}}</span>
+        <input id="new-due-date" type="date" class="hide-element"/>
+    </div>
+<!--    <div class="additional_info" id="description-text">{{description}}</div>-->
+    <!--    <span class="additional_info" id="priority-text">Приоритет: {{priority}}</span>-->
+
+    <div class="opened-card" id="description-box">
+        <label for="description-text" class="sub-panel-title">Описание:</label> <br/>
+        <textarea id="description-text">{{description}}</textarea>
+    </div>
+
+
+
+    <div class="opened-card" id="priority-buttons">
+        <label class="sub-panel-title">Приоритет:</label> <br/>
+        <input type="radio" id="priority-radio-low" name="priority" value="low"/>
+        <label for="priority-radio-low">Нисък</label> <br/>
+        <input type="radio" id="priority-radio-medium" name="priority" value="medium"/>
+        <label for="priority-radio-medium">Среден</label> <br/>
+        <input type="radio" id="priority-radio-high" name="priority" value="high"/>
+        <label for="priority-radio-high">Висок</label> <br/>
+    </div>
+
+    <div class="opened-card" id="team">
+        <span class="sub-panel-title">Екип:</span>
+        <img *ngFor="let person of assignees" src="../../../../assets/img/{{person}}.jpg" class="profile-icon"/>
+    </div>
+
+    <div id="save-exit-buttons">
+        <button id="close" (click)="closeCard()">Отказ</button>
+        <button id="save" (click)="closeCard()">Запазване</button>
+    </div>
+
+</div>
+<div id="darken-page" class="darken-page">
+
+</div>

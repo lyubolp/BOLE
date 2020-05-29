@@ -1,0 +1,132 @@
+@import "../../../../styles.scss";
+@import "../../../../themes/dark.scss";
+
+#card-main
+{
+  width: 100%;
+  height: 100%;
+  background-color: $page-background;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  transition: background-color 0.5s;
+  z-index: 3;
+}
+
+#card-main:hover
+{
+  background-color: $buttons;
+}
+
+.card-main-opened
+{
+  position: absolute;
+  left: 25%;
+  top: 7%;
+  width: 50% !important;
+  height: 86% !important;
+  background-color: $panel-background !important;
+}
+.panel-title
+{
+  margin: 3%;
+}
+
+#time-left-container
+{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  span
+  {
+    margin-top:5px;
+    margin-left: 10px;
+  }
+  margin-left: 10px;
+
+}
+
+.additional_info
+{
+
+}
+
+textarea
+{
+  font-family: $main-font;
+  width: 98%;
+  padding: 1%;
+}
+
+.opened-card
+{
+  display: none;
+  background-color: $page-background;
+  margin: 1.15%;
+  border-radius: 20px;
+  padding: 20px;
+}
+.sub-panel-title
+{
+  font-size: 1.2em;
+  text-decoration: underline;
+  display: block;
+}
+
+.darken-page
+{
+  display: none;
+  position: absolute;
+  left:0px;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  background-color: $page-background;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.hide-element
+{
+  display:none;
+}
+
+.profile-icon
+{
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+}
+
+#team
+{
+  display: none;
+}
+
+.team-panel-open
+{
+  display: flex;
+  flex-direction: row;
+  img
+  {
+    margin-top: 1%;
+    margin-right: 1%;
+  }
+}
+
+#save-exit-buttons
+{
+  display: none;
+  border-radius: 20px;
+  padding: 20px;
+  height: 5%;
+  button
+  {
+    margin: 0.5%;
+    height: 95%;
+    width: 25%;
+  }
+}
+
