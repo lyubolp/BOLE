@@ -1,11 +1,11 @@
 <span class="page-title">Облак</span>
 <body>
 <div class="panel">
-    <button type="button">Файл</button>
+    <button type="button" (click)="newFolder()">Нова папка</button>
     <button routerLink="/projects/code-editor">Редактиране</button>
     <input type="file" id="file-input" name="myFile" (change)="uploadItem($event)"> 
     <label class="label_input" for="file-input">
-        Отваряне
+        Качване
     </label>
 </div>
 <div class="panel" id="file-item-panel">
