@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ChatThread } from '../../interfaces/chat-thread';
+import { ChatService } from 'src/app/services/chat.service';
 
 @Component({
   selector: 'app-chat-thread',
@@ -12,7 +13,7 @@ export class ChatThreadComponent implements OnInit {
   picture: string;
   newMessage: string = '';
 
-  constructor() { }
+  constructor(private chatService: ChatService) { }
 
   ngOnInit(): void {
     this.picture = "assets/icons/person-24px.svg";
@@ -22,8 +23,10 @@ export class ChatThreadComponent implements OnInit {
       (hideMessages[i] as HTMLElement).style.height = '0';
     }
   }
+
   toggleChatThread(event: MouseEvent) {
-    const target = (event.composedPath()[2] as HTMLElement).children.item(0).children.item(1) as HTMLElement;
+    // const target = (event.composedPath()[2] as HTMLElement).children.item(0).children.item(1) as HTMLElement;
+    const target = ((event.currentTarget as HTMLElement).nextSibling as HTMLElement);
     if (target.className == 'chat-messages') {
       if (target.style.visibility === '') {
         target.style.visibility = 'hidden';
@@ -35,6 +38,7 @@ export class ChatThreadComponent implements OnInit {
     }
   }
   sendMessage() {
+    this.chatService.sendMessage(this.thread.name, this.newMessage, 2);
     this.newMessage = '';
   }
 }

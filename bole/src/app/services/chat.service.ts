@@ -76,4 +76,17 @@ export class ChatService {
     return of(this.chatThreads);
   }
 
+  sendMessage(threadName: string, message: string, authorId: number) {
+    const thread = this.chatThreads.find(t => t.name === threadName);
+    if (thread) {
+      thread.messages.push({
+        authorId: authorId,
+        conversationId: thread.messages[0].conversationId,
+        date: new Date(Date.now()),
+        id: thread.messages[thread.messages.length - 1].id + 1,
+        message: message,
+      });
+    }
+  }
+
 }
