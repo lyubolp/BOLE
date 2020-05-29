@@ -84,7 +84,7 @@ export class CloudComponent implements OnInit {
     path_tag2.setAttribute("fill", "none");
 
     var h6_tag = document.createElement("h6");
-    h6_tag.textContent = "new folder";
+    h6_tag.textContent = selectedFileName;
     h6_tag.setAttribute("style", "align-self:center;max-width:70px;text-overflow:ellipsis;overflow:hidden;")
 
     svg_tag.appendChild(path_tag1);
