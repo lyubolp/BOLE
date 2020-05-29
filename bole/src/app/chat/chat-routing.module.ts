@@ -1,4 +1,9 @@
-import { NgModule } from '@angular/core';
+/**
+ * DEPRECATED
+ */
+
+
+/*import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ChatComponent } from './chat/chat.component';
 
@@ -12,3 +17,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class ChatRoutingModule { }
+*/

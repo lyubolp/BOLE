@@ -17,8 +17,22 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
     this.chatService.getChatThreads().subscribe((chatThreads) => this.chatThreads = chatThreads);
+    const chat = document.getElementById('chat-container');
+    const button = document.getElementById('chat-container');
+    chat.style.visibility = 'hidden';
+
   }
   toggle() {
-    this.isOpen = !this.isOpen;
+    const hideChat = document.getElementById('chat-container');
+    const hideButton = document.getElementById('show-chat');
+    if (hideChat.style.visibility === '') {
+      hideChat.style.visibility = 'hidden';
+      hideChat.style.height = '0';
+      hideButton.style.right = '2em';
+    } else {
+      hideChat.style.visibility = '';
+      hideChat.style.height = '100%';
+      hideButton.style.right = '415px';
+    }
   }
 }
