@@ -3,7 +3,7 @@
     <div id="left-side" class="panel">
         <span class="panel-title"> Бързо меню</span>
         <div class="buttons-holder">
-            <button class="left-side-button">
+            <button class="left-side-button" routerLink="/cloud">
                 <svg xmlns="http://www.w3.org/2000/svg" height="70%" viewBox="0 0 24 24" width="70%">
                     <path d="M0 0h24v24H0z" fill="none"/>
                     <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0
@@ -40,8 +40,12 @@
             <a href="{{githubLink}}" target="_blank">
                 <button class="right-side-button">Github</button>
             </a>
-            <button class="right-side-button">Документация</button>
-            <button class="right-side-button">Изисквания</button>
+            <a href="assets/mockup_assets/doc.pdf" target="_blank">
+                <button class="right-side-button">Документация</button>
+            </a>
+            <a href="assets/mockup_assets/requirements.docx" target="_blank">
+                <button class="right-side-button">Изисквания</button>
+            </a>
             <button (click)="toogleUploadDialog()" class="right-side-button">Екип и роли</button>
         </div>
     </div>
