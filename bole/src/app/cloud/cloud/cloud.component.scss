@@ -1,0 +1,62 @@
+@import '../../../themes/dark.scss';
+@import "../../../styles.scss";
+
+button
+{
+    margin: 0.5%;
+    background-color: $buttons;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 0.8em;
+    width: 10%;
+    height: auto;
+}
+
+input#file-input{
+    display: none;
+}
+
+.label_input {
+    padding: 2px;
+    margin: 0.5%;
+    background-color: $buttons;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 0.8em;
+    width: 10%;
+    height: auto;
+    text-align: center;
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+    background: $menu-background;
+    margin: 1vw;
+    border-radius: 10px;
+    color: white;
+}
+
+.file_item {
+    margin: 0.5%;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+    height: 90px;
+}
+
+h6 {
+    align-self: center;
+    max-width: 70px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+
