@@ -14,6 +14,10 @@ import { CourseGroupComponent } from './course-group/course-group.component';
     CommonModule,
     CoursesRoutingModule,
     FormsModule,
+  ],
+  exports: [
+    CourseGroupComponent,
+    CourseCardComponent
   ]
 })
 export class CoursesModule { }
