@@ -1,0 +1,19 @@
+<div id="main">
+    <app-job-card *ngFor="let job of jobs" [jobData]="job" (click)="openJobDescription(job)"></app-job-card>
+</div>
+<div id="darken-page" class="darken-page">
+
+</div>
+<div id="dialog-window" class="dialog-window">
+    <div class="sub-container">Позиция: {{openedJobTitle}}</div>
+    <div class="sub-container">Компания: {{openedJobCompany}}</div>
+    <div class="sub-container">Ниво: {{openedJobLevel}}</div>
+    <div class="sub-container">Описание: {{openedJobDescription}}</div>
+    <div class="sub-container">Технология: {{openedJobTechnology}}</div>
+    <div class="sub-container">Изисквания: {{openedJobRequirements}}</div>
+    <div class="sub-container" id="buttons_holder">
+        <button (click)="closeJobDescription()">Кандидатстване</button>
+        <button (click)="closeJobDescription()">Затваряне</button>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+@import "../../../themes/dark.scss";
+@import "../../../themes/dark.scss";
+
+#main
+{
+  display:flex;
+  flex-direction: row;
+}
+
+#buttons_holder
+{
+  height: 5%;
+  button{
+    height: 100%;
+  }
+}
