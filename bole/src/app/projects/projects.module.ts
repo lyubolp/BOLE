@@ -10,15 +10,17 @@ import { TeamDialogComponent } from './project-main/team-dialog/team-dialog.comp
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { CodeEditorModule } from './code-editor/code-editor.module';
 import {KanbanBoardModule} from './kanban-board/kanban-board.module';
+import {SocialThreadModule} from '../social-thread/social-thread.module';
 
 @NgModule({
   declarations: [ProjectMainComponent, ProjectCardComponent, ProjectPageComponent, TeamDialogComponent],
-  imports: [
-    CommonModule,
-    ProjectsRoutingModule,
-    MonacoEditorModule.forRoot(),
-    CodeEditorModule,
-    KanbanBoardModule
-  ]
+    imports: [
+        CommonModule,
+        ProjectsRoutingModule,
+        MonacoEditorModule.forRoot(),
+        CodeEditorModule,
+        KanbanBoardModule,
+        SocialThreadModule
+    ]
 })
 export class ProjectsModule { }
