@@ -1,0 +1,15 @@
+<div id="chat-thread">
+    <div id="user" (click)="toggleChatThread($event)">
+        <img [src]="picture" alt="">
+        <span id="user-name">{{thread.name}}</span>
+    </div>
+    <div id="chat-messages">
+        <app-chat-message *ngFor="let message of thread.messages" [chatMessage]="message">
+        </app-chat-message>
+        <div id="input-field">
+            <input [(ngModel)]="newMessage" name="write-message" type="text" placeholder="Write message"
+                (keyup.enter)="sendMessage()">
+            <button id="submit-button" (click)="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>

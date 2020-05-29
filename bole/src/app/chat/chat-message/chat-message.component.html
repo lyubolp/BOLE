@@ -1,0 +1,8 @@
+<div id="message1" *ngIf="chatMessage.authorId == 1">
+    <div id="date">{{dateHours}}:{{dateMinutes}}</div>
+    <div id="message-text">{{chatMessage.message}}</div>
+</div>
+<div id="message2" *ngIf="chatMessage.authorId == 2">
+    <div id="date">{{dateHours}}:{{dateMinutes}}</div>
+    <div id="message-text">{{chatMessage.message}}</div>
+</div>
