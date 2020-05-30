@@ -1,0 +1,33 @@
+@import "../../../themes/dark.scss";
+@import "../../../themes/dark.scss";
+
+#main
+{
+  display:flex;
+  flex-direction: row;
+}
+
+#buttons_holder
+{
+  margin-top: 7.5%;
+  height: 7.5%;
+  button{
+    height: 100%;
+  }
+}
+
+.darken-page
+{
+  visibility: hidden;
+  position: absolute;
+  left:0px;
+  top:0px;
+  width: 100%;
+  height: 100%;
+  background-color: $page-background;
+  opacity: 0.8;
+}
+.sub-container
+{
+  height: 10%;
+}
