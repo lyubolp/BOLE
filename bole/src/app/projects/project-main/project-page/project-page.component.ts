@@ -17,7 +17,7 @@ export class ProjectPageComponent implements OnInit {
 
   ngOnInit(): void {
     const data: Project = {id: 1, name: 'BOLE', description: 'To learn about recursion, go to recursion',
-      dueDate: new Date('2020-05-15'), amountOfMembers: 4, newMessages: 0, colorCode: '#203964',
+      dueDate: new Date('2020-06-15'), amountOfMembers: 4, newMessages: 0, colorCode: '#203964',
       github: 'lyubolp/BOLE', cloudStorageId: 1, kanbanBoardId: 1, team_ids: [1, 2, 3, 4], conversation_id: 1};
 
     this.projectName = data.name;
