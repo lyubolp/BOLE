@@ -231,7 +231,7 @@ export class CourseService {
           },
           {
             name: 'Канал на курса',
-            link: 'TODO-ADD-LINK',
+            link: 'https://youtube.com/',
             type: 'link'
           }
         ]
