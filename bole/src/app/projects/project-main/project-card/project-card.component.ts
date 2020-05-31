@@ -20,7 +20,7 @@ export class ProjectCardComponent implements OnInit {
 
   ngOnInit(): void {
     const data: ProjectCard = {id: 1, name: 'BOLE', description: 'To learn about recursion, go to recursion',
-      dueDate: new Date('2020-05-15'), amountOfMembers: 4, newMessages: 0, colorCode: '#203964'};
+      dueDate: new Date('2020-06-15'), amountOfMembers: 4, newMessages: 0, colorCode: '#203964'};
 
     this.title = data.name;
     this.colorCode = data.colorCode;
