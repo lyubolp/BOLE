@@ -36,7 +36,11 @@ export class DashboardComponent implements OnInit {
   }
 
   redirect(location: string) {
-    this.router.navigate([location]);
+    if (location.startsWith('/')) {
+      this.router.navigate([location]);
+    } else {
+      window.location.href = location;
+    }
   }
 
 }
